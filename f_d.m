@@ -1,6 +1,7 @@
 function [f_val, g, exit_flag] = f_d(x)
+    x=x(:); %x als spaltenvektor
     exit_flag=0;
-    n = size(x,1);
+    n = length(x);
     
     v=(1:n)';
     A=(1/(100*n))*eye(n)+hilb(n);

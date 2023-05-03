@@ -1,7 +1,5 @@
-
-
-function [x_new,f_new,g_new, exit_flag, alpha, evals] = LineSearch (f, x_old, f_old, g_old, p, phi_min, alpha_st)
-
+function [x_new,f_new,g_new, exit_flag, alpha, eval] = LineSearch (f, x_old, f_old, g_old, p, phi_min, alpha_st)
+x_old=x_old(:); %immer spaltenvektor
 tau =  0.1;
 tau1 = 0.1;
 tau2 = 0.6;
@@ -15,18 +13,18 @@ if nargin == 6
   alpha_st = 1;
 end
 
-alpha_l = 0
-phi_l = f_old
-dphi_l = dot(g_old,p)
-exit_flag = 0
-alpha_r = 0
+alpha_l = 0;
+phi_l = f_old;
+dphi_l = dot(g_old,p);
+exit_flag = 0;
+alpha_r = 10^30;
 
 alpha_tilde = 0;
-evals = 0;
+eval = 0;
 
-while abs(alpha_r - alpha_l) > 10* e^-15
-    x_temp = x_old + alpha_st * p
-    [f_temp, g_temp, exit_flag] = f(x_temp)
+while abs(alpha_r - alpha_l) > 10^(-15)
+    x_temp = x_old + alpha_st * p;
+    [f_temp, g_temp, exit_flag] = f(x_temp);
     eval = eval + 1;
 
     if exit_flag ~= 0
@@ -37,7 +35,7 @@ while abs(alpha_r - alpha_l) > 10* e^-15
 
         if phi_hat < phi_min
 
-            exit_flag = 2
+            exit_flag = 2;
             fprintf("Error, unbounded function")
             alpha = alpha_st;
             x_new = x_temp;
@@ -51,9 +49,9 @@ while abs(alpha_r - alpha_l) > 10* e^-15
             length = alpha_r - alpha_l;
             c = (phi_hat - phi_l  - dphi_l*length)/ (length^2);
             alpha_tilde = alpha_l - dphi_l/(2*c);
-            alpha_st = min(max(alpha_l + tau * length ,alpha_tilde),alpha_r - tau * length)
+            alpha_st = min(max(alpha_l + tau * length ,alpha_tilde),alpha_r - tau * length);
         else
-            dphi_hat = dot(g_temp,p)
+            dphi_hat = dot(g_temp,p);
             if dphi_hat < sigma * dphi_l
                 if flag
                     if dphi_l/dphi_hat > (1 + xi2)/xi2
@@ -76,11 +74,14 @@ while abs(alpha_r - alpha_l) > 10* e^-15
                 alpha = alpha_st;
                 x_new = x_old+alpha*p;
                 [f_new,g_new,exit_flag] = f(x_new);
-                evals = evals+1;
+                eval = eval+1;
                 return
+            end
         end
     end
-    end
 end
-
+alpha = alpha_st;
+x_new = x_old+alpha*p;
+[f_new,g_new,exit_flag] = f(x_new);
+eval = eval+1;
 end
