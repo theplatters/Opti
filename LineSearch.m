@@ -15,18 +15,18 @@ if nargin == 6
   alpha_st = 1;
 end
 
-alpha_l = 0
-phi_l = f_old
-dphi_l = dot(g_old,p)
-exit_flag = 0
-alpha_r = 0
+alpha_l = 0;
+phi_l = f_old;
+dphi_l = dot(g_old,p);
+exit_flag = 0;
+alpha_r = 0;
 
 alpha_tilde = 0;
 evals = 0;
 
-while abs(alpha_r - alpha_l) > 10* e^-15
-    x_temp = x_old + alpha_st * p
-    [f_temp, g_temp, exit_flag] = f(x_temp)
+while abs(alpha_r - alpha_l) <= 10* e^-15
+    x_temp = x_old + alpha_st * p;
+    [f_temp, g_temp, exit_flag] = f(x_temp);
     eval = eval + 1;
 
     if exit_flag ~= 0

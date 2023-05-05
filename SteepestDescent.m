@@ -29,19 +29,19 @@ function [x,f_val,g,exit_flag, iter, evals] = SteepestDescent (f, x0, phi_min,ep
    end
 
    if nargin < 6
-    typ_f = 1*e^-4
+    typ_f = 1*e^-4;
    end
 
    if nargin < 5
-    itmax = 1000
+    itmax = 1000;
   end
 
   if nargin < 4
-    eps = 1*e^-6
+    eps = 1*e^-6;
   end
 
   if nargin < 3
-    phi_min = -1*e^30
+    phi_min = -1*e^30;
   end
 
   xk = x0;
