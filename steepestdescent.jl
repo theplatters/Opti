@@ -17,7 +17,7 @@ function steepestDescent!(xks,prob :: OptimizationProblem)
         gk = prob.g(xk);
         Gk = prob.hessian(xk)
         α  = - (gk' * -gk)/(-gk'*Gk* -gk)
-        println(α)
+
         xk = oneStep(xk,-gk,α)
         push!(xks,xk)
     end
@@ -41,7 +41,7 @@ gsk = map(g,xks)
 
 fbar = -0.58244517
 
-ratio(fk1,fk) = (fk1-fbar)/(fk-fbar)
+ratio(fk1,fk) = abs((fk1-fbar)/(fk-fbar))
 
 imap(ratio,fks[2:end],fks[1:end-1]) |> collect
 
