@@ -22,7 +22,7 @@ function [x,f_val,g,exit_flag, iter, evals] = SteepestDescent (f, x0, phi_min,ep
 
   xk = x0;
   [fk,gk,exit_flag] = f(x0);
-  evals = 0;
+  evals = 1;
   for iter = 1:itmax
 
     if max(abs(gk) .* typ_x / typ_f) <= eps

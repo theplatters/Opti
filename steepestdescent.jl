@@ -13,7 +13,7 @@ end
 
 function steepestDescent!(xks,prob :: OptimizationProblem)
     xk = prob.x0
-    for i in 1:10
+    for i in 1:100
         gk = prob.g(xk);
         Gk = prob.hessian(xk)
         α  = - (gk' * -gk)/(-gk'*Gk* -gk)
@@ -29,7 +29,7 @@ f(x) = 16*x[1]^4 + 2*x[1]*x[2]+(1+x[2])^2
 
 g(x) = [64*x[1]^3 + 2*x[2],2*x[1] + 2*(1+x[2])]
 
-H(x) = [192*x[1]^2  2.0; 2.0 2*x[2]]
+H(x) = [192*x[1]^2  2.0; 2.0 2]
 x0 = [0.375,-1.25]
 prob = OptimizationProblem(f,g,H,x0)
 
@@ -47,4 +47,4 @@ imap(ratio,fks[2:end],fks[1:end-1]) |> collect
 
 κ= cond(H(last(xks)))
 
-1 - (4 * κ)/(1+κ)^2
+1 - (4 * κ)/(1+κ)^2     

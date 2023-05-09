@@ -1,19 +1,17 @@
 function [f_val, g, exit_flag] = f_c(x)
-    x=x(:);
     exit_flag=0;
-    f_val=0;
-    g= zeros(1,size(x,1));
     n = length(x);
-    for i=1:n
-        if (x(i) <= 0)
-            exit_flag=1;
-            return
-        end
+    if min(x)<=0
+        f_val = 69;
+        g = 420*ones(n,1);
+        disp("Function evaluation at invalid input, function value set to dummy, abort computation")
+        exit_flag = 1;
+        return
     end
     
-    f_val = sum((1:n)'.*x.*log(x)) + 1/sum(x);
+    f_val = sum((1:n).*x.*reallog(x)) + 1/sum(x);
     g=zeros(n,1);
     for i=1:n
-        g(i)=i*(log(x(i))+1)-1/sum(x)^2;
+        g(i)=i*(reallog(x(i))+1)-1/sum(x)^2;
     end
 end

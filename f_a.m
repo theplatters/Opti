@@ -1,4 +1,4 @@
-function [f_val, g, exit_flag] = f_a(x)
+    function [f_val, g, exit_flag] = f_a(x)
     exit_flag=0;
     x1=x(1);
     x2=x(2);
