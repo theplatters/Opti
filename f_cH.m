@@ -1,8 +1,8 @@
 function [f_val, g, H] = f_cH(x)
     n = length(x);
     if min(x)<=0
-        f_val = 69; %dummy values
-        g = 420*ones(n,1); %dummy values
+        f_val = 10^30; %dummy values
+        g = ones(n,1); %dummy values
         return
     end
     
