@@ -2,11 +2,15 @@ function [x,f_val,g,exit_flag, iter, evals] = SteepestDescent (f, x0, phi_min,ep
 
   if nargin < 7
     typ_x(1:size(x0,1)) = 10^-4;
-   end
+  end
 
-   if nargin < 6
+  if nargin < 6
     typ_f = 10^-4;
-   end
+  end
+
+  if nargin < 5
+    itmax = 1000;
+  end
 
    if nargin < 5
     itmax = 1000;

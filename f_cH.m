@@ -1,7 +1,7 @@
 function [f_val, g, H] = f_cH(x)
     n = length(x);
-    if min(x)<=0
-        f_val = 69;
+    if min(x) <= 0
+        f_val = 10^30;
         g = 420*ones(n,1);
         %disp("Function evaluation at invalid input, function value set to dummy, abort computation")
         return
