@@ -1,0 +1,1052 @@
+===========================================
+(A)
+===========================================
+Testing objective function f_a with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: []
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'off'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.251446e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_a =
+
+   1.0e-06 *
+
+   -0.2002    0.6078
+
+Calculated Minimum value: 1.1571e-13
+Norm of gradient at calculated Minimum: 5.8763e-07
+===========================================
+Testing objective function f_a with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'off'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.251446e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_a =
+
+   1.0e-06 *
+
+   -0.2002    0.6078
+
+Calculated Minimum value: 1.1571e-13
+Norm of gradient at calculated Minimum: 5.8763e-07
+===========================================
+Testing objective function f_a with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: 'trust-region'
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'on'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the final change in function value relative to 
+its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
+
+<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',7.816715e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_a =
+
+   1.0e-03 *
+
+    0.7869   -0.2361
+
+Calculated Minimum value: 2.0406e-07
+Norm of gradient at calculated Minimum: 0.00079236
+===========================================
+===========================================
+(B)
+===========================================
+Testing objective function f_b with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: []
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'off'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.624363e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_b =
+
+    1.0000    1.0000
+
+Calculated Minimum value: 6.6115e-11
+Norm of gradient at calculated Minimum: 0.00029178
+===========================================
+Testing objective function f_b with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'off'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.624363e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_b =
+
+    1.0000    1.0000
+
+Calculated Minimum value: 6.6115e-11
+Norm of gradient at calculated Minimum: 0.00029178
+===========================================
+Testing objective function f_b with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: 'trust-region'
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'on'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('sfminle',1.000000e+00,true,true,'fminunc',2.778283e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_b =
+
+    1.0000    1.0000
+
+Calculated Minimum value: 1.931e-17
+Norm of gradient at calculated Minimum: 3.3208e-08
+===========================================
+===========================================
+C
+===========================================
+Testing objective function f_c with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: []
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'off'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+===========================================
+Results for n=10
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.967900e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_c1 =
+
+    0.3949    0.3811    0.3767    0.3745    0.3731    0.3722    0.3716    0.3712    0.3708    0.3705
+
+Calculated Minimum value: -19.9644
+Norm of gradient at calculated Minimum: 1.0378e-05
+===========================================
+Results for n=100
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.702941e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -1857.764
+Norm of gradient at calculated Minimum: 0.00082223
+===========================================
+Results for n=1000
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.088470e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -184123.6576
+Norm of gradient at calculated Minimum: 0.010364
+Testing objective function f_c with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'off'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+===========================================
+Results for n=10
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.967900e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_c1 =
+
+    0.3949    0.3811    0.3767    0.3745    0.3731    0.3722    0.3716    0.3712    0.3708    0.3705
+
+Calculated Minimum value: -19.9644
+Norm of gradient at calculated Minimum: 1.0378e-05
+===========================================
+Results for n=100
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.702941e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -1857.764
+Norm of gradient at calculated Minimum: 0.00082223
+===========================================
+Results for n=1000
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.088470e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -184123.6576
+Norm of gradient at calculated Minimum: 0.010364
+Testing objective function f_c with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: 'trust-region'
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'on'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+===========================================
+Results for n=10
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the final change in function value relative to 
+its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
+
+<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',2.204798e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_c1 =
+
+    0.3949    0.3812    0.3767    0.3745    0.3731    0.3723    0.3716    0.3712    0.3708    0.3705
+
+Calculated Minimum value: -19.9644
+Norm of gradient at calculated Minimum: 0.00012999
+===========================================
+Results for n=100
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('sfminle',1.000000e+00,true,true,'fminunc',1.865793e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -1857.764
+Norm of gradient at calculated Minimum: 1.8685e-07
+===========================================
+Results for n=1000
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the final change in function value relative to 
+its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
+
+<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',2.829318e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -184123.6576
+Norm of gradient at calculated Minimum: 0.0010339
+===========================================
+(D)
+===========================================
+Testing objective function f_d with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: []
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'off'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+===========================================
+Results for n=10
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',9.368012e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_d1 =
+
+    0.7073    1.4114    2.1295    2.8233    3.5305    4.2432    4.9540    5.6603    6.3619    7.0693
+
+Calculated Minimum value: -16769.7156
+Norm of gradient at calculated Minimum: 0.029042
+===========================================
+Results for n=100
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.246662e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -10987678753.1027
+Norm of gradient at calculated Minimum: 13.4558
+===========================================
+Results for n=1000
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.936574e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -1.051366255854342e+16
+Norm of gradient at calculated Minimum: 25147.6496
+Testing objective function f_d with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: []
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'off'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+===========================================
+Results for n=10
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',9.368012e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated minimizer: 
+
+s_d1 =
+
+    0.7073    1.4114    2.1295    2.8233    3.5305    4.2432    4.9540    5.6603    6.3619    7.0693
+
+Calculated Minimum value: -16769.7156
+Norm of gradient at calculated Minimum: 0.029042
+===========================================
+Results for n=100
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.246662e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -10987678753.1027
+Norm of gradient at calculated Minimum: 13.4558
+===========================================
+Results for n=1000
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.936574e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -1.051366255854342e+16
+Norm of gradient at calculated Minimum: 25147.6496
+Testing objective function f_d with options: 
+                   Display: []
+               MaxFunEvals: []
+                   MaxIter: []
+                    TolFun: []
+                      TolX: []
+               FunValCheck: []
+                 OutputFcn: []
+                  PlotFcns: []
+           ActiveConstrTol: []
+                 Algorithm: 'trust-region'
+    AlwaysHonorConstraints: []
+           DerivativeCheck: []
+               Diagnostics: []
+             DiffMaxChange: []
+             DiffMinChange: []
+            FinDiffRelStep: []
+               FinDiffType: []
+         GoalsExactAchieve: []
+                GradConstr: []
+                   GradObj: 'on'
+                   HessFcn: []
+                   Hessian: 'on'
+                  HessMult: []
+               HessPattern: []
+                HessUpdate: []
+          InitBarrierParam: []
+     InitTrustRegionRadius: []
+                  Jacobian: []
+                 JacobMult: []
+              JacobPattern: []
+                LargeScale: 'on'
+                  MaxNodes: []
+                MaxPCGIter: []
+             MaxProjCGIter: []
+                MaxSQPIter: []
+                   MaxTime: []
+             MeritFunction: []
+                 MinAbsMax: []
+        NoStopIfFlatInfeas: []
+            ObjectiveLimit: []
+      PhaseOneTotalScaling: []
+            Preconditioner: []
+          PrecondBandWidth: []
+            RelLineSrchBnd: []
+    RelLineSrchBndDuration: []
+              ScaleProblem: []
+       SubproblemAlgorithm: []
+                    TolCon: []
+                 TolConSQP: []
+                TolGradCon: []
+                    TolPCG: []
+                 TolProjCG: []
+              TolProjCGAbs: []
+                  TypicalX: []
+               UseParallel: []
+
+===========================================
+Results for n=10
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+fminunc stopped because it exceeded the iteration limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_iter','CSHelpWindow');">options.MaxIterations</a> = 400 (the default value).
+
+Calculated minimizer: 
+
+s_d1 =
+
+    0.7976    0.6364    2.8053    3.8166    4.0723    3.9870    3.7920    3.6033    3.4749   11.9926
+
+Calculated Minimum value: -16758.8021
+Norm of gradient at calculated Minimum: 11.9204
+===========================================
+Results for n=100
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+fminunc stopped because it exceeded the iteration limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_iter','CSHelpWindow');">options.MaxIterations</a> = 400 (the default value).
+
+Calculated Minimum value: -10968504409.5875
+Norm of gradient at calculated Minimum: 86246.1883
+===========================================
+Results for n=1000
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
+
+fminunc stopped because the final change in function value relative to 
+its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
+
+<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',9.908369e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+Calculated Minimum value: -1.051215141638858e+16
+Norm of gradient at calculated Minimum: 3110412089.4636
