@@ -31,8 +31,8 @@
 	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
 	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
 	showstringspaces=false,          % underline spaces within strings only
-	showtabs=false,                  % show tabs within strings adding particular underscores
-	stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	showtabs=false,                  % show tabs within strings adding particular underscores 
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
 	stringstyle=\color{mymauve},     % string literal style
 	tabsize=4,	                   % sets default tabsize to 2 spaces
 	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
@@ -89,9 +89,124 @@
 	\subsection{Tests in Exercise 2}
 	\lstinputlisting{src/Prog1Ex2.m}
     \subsection{Test output}
+    As can be observed, for every testfunction and every given starting value \texttt{fminunc} was called with the three required options.
+    Running \texttt{Prog1Ex2.m} produces the output below (console output logged using \texttt{Matlab}-diary functionality)
+    
     \lstinputlisting{src/Test1.txt}
 	
 	\subsection{Interpretation}
+    
+    We will proceed to extract the relevant information of the above output for every function tested
+    For the subsequent sections we will use the following notation
+    \begin{enumerate}
+        \item O1 : LargeScale = off, GradObj = on
+        \item O2 : LargeScale = on, GradObj = on, Hessian = off
+        \item O3 : LargeScale = on, GradObj = on, Hessian = on
+    \end{enumerate}
+    \subsubsection{\texttt{f\_a}}
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+    \hline
+    Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+    O1&Local Min found&$1.1571 \cdot 10^{-13}$&$5.8763 \cdot 10^{-7}$&8\\
+    O2&Local Min found&$1.157 \cdot10^{-13}$&$5.8763 \cdot10^{-7}$&8\\
+    O3&Local Min possible&$2.0406\cdot10^{-7}$&$0.00079236$&12\\
+    \hline
+    \end{tabular}
+    \end{center}
+    In the last call, when using
+
+    \subsubsection{\texttt{f\_b}}
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+    \hline
+    Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+    O1&Local Min found&$6.6115e-11$&$0.00029178$&39\\
+    O2&Local Min found&$6.6115e-11$&$0.00029178$&39\\
+    O3&Local Min possible&$1.931e-17$&$3.3208e-08$&30\\
+    \hline
+    \end{tabular}
+    \end{center}
+
+    \subsubsection{\texttt{f\_c}}
+    \begin{enumerate}
+        \item $n=10$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+        O1&Local Min found&$-19.9644$&$1.0378e-05$&29\\
+        O2&Local Min found&$-19.9644$&$1.0378e-05$&29\\
+        O3&Local Min possible&$-19.9644$&$0.00012999$&12\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \item $n=100$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+        O1&Local Min found&$-1857.764$&$0.00082223$&79\\
+        O2&Local Min found&$-1857.764$&$0.00082223$&29\\
+        O3&Local Min found&$-1857.764$&$1.8685e-07$&11\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \item $n=1000$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+        O1&Local Min found&$-184123.6576$&$0.010364$&203\\
+        O2&Local Min found&$-184123.6576$&$0.010364$&203\\
+        O3&Local Min possible&$-184123.6576$&$0.0010339$&16\\
+        \hline
+        \end{tabular}
+        \end{center}     
+    \end{enumerate}
+
+    \subsubsection{\texttt{f\_d}}
+    \begin{enumerate}
+        \item $n=10$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+        O1&Local Min found&$-16769.7156$&$0.029042$&54\\
+        O2&Local Min found&$-16769.7156$&$0.029042$&54\\
+        O3&Solver stopped prematurely;&\\ &exceeded it limit&$-16758.8021$&$11.9204$&401\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \item $n=100$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+        O1&Local Min found&$-10987678753.1027$&$13.4558$&78\\
+        O2&Local Min found&$-10987678753.1027$&$13.4558$&78\\
+        O3&Solver stopped prematurely;&\\ &exceeded it limit&$-10968504409.5875$&$ 86246.1883$&401\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+         \item $n=1000$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations\\
+        O1&Local Min found&$-1.051366255854342e+16$&$25147.6496$&152\\
+        O2&Local Min found&$-1.051366255854342e+16$&$25147.6496$&152\\
+         O3&Local Min possible&$-1.051215141638858e+16$&$3110412089.4636$&253\\
+        \hline
+        \end{tabular}
+        \end{center}
+    \end{enumerate}
+    
+    
 	
 	\section{Exercise 3}
 	\subsection{Interpretation}

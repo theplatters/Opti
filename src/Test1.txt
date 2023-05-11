@@ -1,8 +1,8 @@
-===========================================
+======================================================
 (A)
-===========================================
+======================================================
 Testing objective function f_a with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -58,17 +58,9 @@ Testing objective function f_a with options:
                   TypicalX: []
                UseParallel: []
 
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.251446e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
 Calculated minimizer: 
 
-s_a =
+x =
 
    1.0e-06 *
 
@@ -76,9 +68,17 @@ s_a =
 
 Calculated Minimum value: 1.1571e-13
 Norm of gradient at calculated Minimum: 5.8763e-07
-===========================================
+       iterations: 8
+        funcCount: 9
+         stepsize: 1.8956e-04
+     lssteplength: 1
+    firstorderopt: 4.8838e-07
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 5.251446e-08, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   5.25e-08             OptimalityTolerance =   1e-06 (default)'
+
+======================================================
 Testing objective function f_a with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -134,17 +134,9 @@ Testing objective function f_a with options:
                   TypicalX: []
                UseParallel: []
 
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.251446e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
 Calculated minimizer: 
 
-s_a =
+x =
 
    1.0e-06 *
 
@@ -152,9 +144,17 @@ s_a =
 
 Calculated Minimum value: 1.1571e-13
 Norm of gradient at calculated Minimum: 5.8763e-07
-===========================================
+       iterations: 8
+        funcCount: 9
+         stepsize: 1.8956e-04
+     lssteplength: 1
+    firstorderopt: 4.8838e-07
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 5.251446e-08, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   5.25e-08             OptimalityTolerance =   1e-06 (default)'
+
+======================================================
 Testing objective function f_a with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -210,17 +210,9 @@ Testing objective function f_a with options:
                   TypicalX: []
                UseParallel: []
 
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
-
-fminunc stopped because the final change in function value relative to 
-its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
-
-<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',7.816715e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
 Calculated minimizer: 
 
-s_a =
+x =
 
    1.0e-03 *
 
@@ -228,12 +220,21 @@ s_a =
 
 Calculated Minimum value: 2.0406e-07
 Norm of gradient at calculated Minimum: 0.00079236
-===========================================
-===========================================
+         iterations: 12
+          funcCount: 13
+           stepsize: 0.0025
+       cgiterations: 12
+      firstorderopt: 6.5317e-04
+          algorithm: 'trust-region'
+            message: 'Local minimum possible.↵↵fminunc stopped because the final change in function value relative to ↵its initial value is less than the default value of the function tolerance.↵↵Stopping criteria details:↵↵Optimization stopped because the relative objective function value is changing↵by less than options.FunctionTolerance = 1.000000e-06.↵↵Optimization Metric                                       Options↵relative change objective =   7.82e-07          FunctionTolerance =   1e-06 (default)'
+    constrviolation: []
+
+======================================================
+======================================================
 (B)
-===========================================
+======================================================
 Testing objective function f_b with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -289,25 +290,25 @@ Testing objective function f_b with options:
                   TypicalX: []
                UseParallel: []
 
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.624363e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
 Calculated minimizer: 
 
-s_b =
+x =
 
     1.0000    1.0000
 
 Calculated Minimum value: 6.6115e-11
 Norm of gradient at calculated Minimum: 0.00029178
-===========================================
+       iterations: 39
+        funcCount: 50
+         stepsize: 4.0089e-04
+     lssteplength: 1
+    firstorderopt: 2.6299e-04
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 6.624363e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   6.62e-07             OptimalityTolerance =   1e-06 (default)'
+
+======================================================
 Testing objective function f_b with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -363,25 +364,25 @@ Testing objective function f_b with options:
                   TypicalX: []
                UseParallel: []
 
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.624363e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
 Calculated minimizer: 
 
-s_b =
+x =
 
     1.0000    1.0000
 
 Calculated Minimum value: 6.6115e-11
 Norm of gradient at calculated Minimum: 0.00029178
-===========================================
+       iterations: 39
+        funcCount: 50
+         stepsize: 4.0089e-04
+     lssteplength: 1
+    firstorderopt: 2.6299e-04
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 6.624363e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   6.62e-07             OptimalityTolerance =   1e-06 (default)'
+
+======================================================
 Testing objective function f_b with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -437,28 +438,29 @@ Testing objective function f_b with options:
                   TypicalX: []
                UseParallel: []
 
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('sfminle',1.000000e+00,true,true,'fminunc',2.778283e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
 Calculated minimizer: 
 
-s_b =
+x =
 
     1.0000    1.0000
 
 Calculated Minimum value: 1.931e-17
 Norm of gradient at calculated Minimum: 3.3208e-08
-===========================================
-===========================================
+         iterations: 30
+          funcCount: 31
+           stepsize: 2.3363e-05
+       cgiterations: 25
+      firstorderopt: 2.7783e-08
+          algorithm: 'trust-region'
+            message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 2.778283e-08, ↵is less than options.OptimalityTolerance = 1.000000e-06, and no negative/zero↵curvature is detected in the trust-region model.↵↵Optimization Metric                                        Options↵relative first-order optimality =   2.78e-08   OptimalityTolerance =   1e-06 (default)'
+    constrviolation: []
+
+======================================================
+======================================================
 C
-===========================================
+======================================================
 Testing objective function f_c with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -514,50 +516,51 @@ Testing objective function f_c with options:
                   TypicalX: []
                UseParallel: []
 
-===========================================
-Results for n=10
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.967900e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+======================================================
+Results for n= 10
 Calculated minimizer: 
 
-s_c1 =
+x =
 
     0.3949    0.3811    0.3767    0.3745    0.3731    0.3722    0.3716    0.3712    0.3708    0.3705
 
 Calculated Minimum value: -19.9644
 Norm of gradient at calculated Minimum: 1.0378e-05
-===========================================
-Results for n=100
+       iterations: 29
+        funcCount: 55
+         stepsize: 3.0515e-06
+     lssteplength: 1
+    firstorderopt: 8.0412e-06
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 2.967900e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   2.97e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.702941e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 100
 Calculated Minimum value: -1857.764
 Norm of gradient at calculated Minimum: 0.00082223
-===========================================
-Results for n=1000
+       iterations: 79
+        funcCount: 160
+         stepsize: 2.0476e-05
+     lssteplength: 0.1895
+    firstorderopt: 1.7558e-04
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 6.702941e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   6.70e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.088470e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 1000
 Calculated Minimum value: -184123.6576
 Norm of gradient at calculated Minimum: 0.010364
+       iterations: 203
+        funcCount: 408
+         stepsize: 2.7483e-05
+     lssteplength: 0.2436
+    firstorderopt: 0.0019
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 7.088470e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   7.09e-07             OptimalityTolerance =   1e-06 (default)'
+
+====================================================
 Testing objective function f_c with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -613,50 +616,51 @@ Testing objective function f_c with options:
                   TypicalX: []
                UseParallel: []
 
-===========================================
-Results for n=10
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.967900e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+======================================================
+Results for n= 10
 Calculated minimizer: 
 
-s_c1 =
+x =
 
     0.3949    0.3811    0.3767    0.3745    0.3731    0.3722    0.3716    0.3712    0.3708    0.3705
 
 Calculated Minimum value: -19.9644
 Norm of gradient at calculated Minimum: 1.0378e-05
-===========================================
-Results for n=100
+       iterations: 29
+        funcCount: 55
+         stepsize: 3.0515e-06
+     lssteplength: 1
+    firstorderopt: 8.0412e-06
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 2.967900e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   2.97e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.702941e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 100
 Calculated Minimum value: -1857.764
 Norm of gradient at calculated Minimum: 0.00082223
-===========================================
-Results for n=1000
+       iterations: 79
+        funcCount: 160
+         stepsize: 2.0476e-05
+     lssteplength: 0.1895
+    firstorderopt: 1.7558e-04
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 6.702941e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   6.70e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.088470e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 1000
 Calculated Minimum value: -184123.6576
 Norm of gradient at calculated Minimum: 0.010364
+       iterations: 203
+        funcCount: 408
+         stepsize: 2.7483e-05
+     lssteplength: 0.2436
+    firstorderopt: 0.0019
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 7.088470e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   7.09e-07             OptimalityTolerance =   1e-06 (default)'
+
+====================================================
 Testing objective function f_c with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -712,53 +716,57 @@ Testing objective function f_c with options:
                   TypicalX: []
                UseParallel: []
 
-===========================================
-Results for n=10
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
-
-fminunc stopped because the final change in function value relative to 
-its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
-
-<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',2.204798e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+======================================================
+Results for n= 10
 Calculated minimizer: 
 
-s_c1 =
+x =
 
     0.3949    0.3812    0.3767    0.3745    0.3731    0.3723    0.3716    0.3712    0.3708    0.3705
 
 Calculated Minimum value: -19.9644
 Norm of gradient at calculated Minimum: 0.00012999
-===========================================
-Results for n=100
+         iterations: 12
+          funcCount: 13
+           stepsize: 0.0015
+       cgiterations: 8
+      firstorderopt: 9.4470e-05
+          algorithm: 'trust-region'
+            message: 'Local minimum possible.↵↵fminunc stopped because the final change in function value relative to ↵its initial value is less than the default value of the function tolerance.↵↵Stopping criteria details:↵↵Optimization stopped because the relative objective function value is changing↵by less than options.FunctionTolerance = 1.000000e-06.↵↵Optimization Metric                                       Options↵relative change objective =   2.20e-07          FunctionTolerance =   1e-06 (default)'
+    constrviolation: []
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('sfminle',1.000000e+00,true,true,'fminunc',1.865793e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 100
 Calculated Minimum value: -1857.764
 Norm of gradient at calculated Minimum: 1.8685e-07
-===========================================
-Results for n=1000
+         iterations: 11
+          funcCount: 12
+           stepsize: 2.2483e-05
+       cgiterations: 9
+      firstorderopt: 1.8658e-07
+          algorithm: 'trust-region'
+            message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 1.865793e-07, ↵is less than options.OptimalityTolerance = 1.000000e-06, and no negative/zero↵curvature is detected in the trust-region model.↵↵Optimization Metric                                        Options↵relative first-order optimality =   1.87e-07   OptimalityTolerance =   1e-06 (default)'
+    constrviolation: []
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
-
-fminunc stopped because the final change in function value relative to 
-its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
-
-<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',2.829318e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 1000
 Calculated Minimum value: -184123.6576
 Norm of gradient at calculated Minimum: 0.0010339
-===========================================
+         iterations: 16
+          funcCount: 17
+           stepsize: 0.0087
+       cgiterations: 12
+      firstorderopt: 1.0831e-04
+          algorithm: 'trust-region'
+            message: 'Local minimum possible.↵↵fminunc stopped because the final change in function value relative to ↵its initial value is less than the default value of the function tolerance.↵↵Stopping criteria details:↵↵Optimization stopped because the relative objective function value is changing↵by less than options.FunctionTolerance = 1.000000e-06.↵↵Optimization Metric                                       Options↵relative change objective =   2.83e-08          FunctionTolerance =   1e-06 (default)'
+    constrviolation: []
+
+====================================================
+====================================================
 (D)
-===========================================
+====================================================
 Testing objective function f_d with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -814,50 +822,51 @@ Testing objective function f_d with options:
                   TypicalX: []
                UseParallel: []
 
-===========================================
-Results for n=10
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',9.368012e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+======================================================
+Results for n= 10
 Calculated minimizer: 
 
-s_d1 =
+x =
 
     0.7073    1.4114    2.1295    2.8233    3.5305    4.2432    4.9540    5.6603    6.3619    7.0693
 
 Calculated Minimum value: -16769.7156
 Norm of gradient at calculated Minimum: 0.029042
-===========================================
-Results for n=100
+       iterations: 54
+        funcCount: 57
+         stepsize: 0.0481
+     lssteplength: 1
+    firstorderopt: 0.0135
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 9.368012e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   9.37e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.246662e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 100
 Calculated Minimum value: -10987678753.1027
 Norm of gradient at calculated Minimum: 13.4558
-===========================================
-Results for n=1000
+       iterations: 78
+        funcCount: 83
+         stepsize: 0.2896
+     lssteplength: 1
+    firstorderopt: 3.7624
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 6.246662e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   6.25e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.936574e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 1000
 Calculated Minimum value: -1.051366255854342e+16
 Norm of gradient at calculated Minimum: 25147.6496
+       iterations: 152
+        funcCount: 161
+         stepsize: 3.3739
+     lssteplength: 1
+    firstorderopt: 3.6475e+03
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 5.936574e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   5.94e-07             OptimalityTolerance =   1e-06 (default)'
+
+====================================================
 Testing objective function f_d with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -913,50 +922,51 @@ Testing objective function f_d with options:
                   TypicalX: []
                UseParallel: []
 
-===========================================
-Results for n=10
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',9.368012e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+======================================================
+Results for n= 10
 Calculated minimizer: 
 
-s_d1 =
+x =
 
     0.7073    1.4114    2.1295    2.8233    3.5305    4.2432    4.9540    5.6603    6.3619    7.0693
 
 Calculated Minimum value: -16769.7156
 Norm of gradient at calculated Minimum: 0.029042
-===========================================
-Results for n=100
+       iterations: 54
+        funcCount: 57
+         stepsize: 0.0481
+     lssteplength: 1
+    firstorderopt: 0.0135
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 9.368012e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   9.37e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.246662e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 100
 Calculated Minimum value: -10987678753.1027
 Norm of gradient at calculated Minimum: 13.4558
-===========================================
-Results for n=1000
+       iterations: 78
+        funcCount: 83
+         stepsize: 0.2896
+     lssteplength: 1
+    firstorderopt: 3.7624
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 6.246662e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   6.25e-07             OptimalityTolerance =   1e-06 (default)'
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
-
-Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
-the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
-
-<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.936574e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 1000
 Calculated Minimum value: -1.051366255854342e+16
 Norm of gradient at calculated Minimum: 25147.6496
+       iterations: 152
+        funcCount: 161
+         stepsize: 3.3739
+     lssteplength: 1
+    firstorderopt: 3.6475e+03
+        algorithm: 'quasi-newton'
+          message: 'Local minimum found.↵↵Optimization completed because the size of the gradient is less than↵the default value of the optimality tolerance.↵↵Stopping criteria details:↵↵Optimization completed: The first-order optimality measure, 5.936574e-07, is less ↵than options.OptimalityTolerance = 1.000000e-06.↵↵Optimization Metric                                          Options↵relative norm(gradient) =   5.94e-07             OptimalityTolerance =   1e-06 (default)'
+
+====================================================
 Testing objective function f_d with options: 
-                   Display: []
+                   Display: 'off'
                MaxFunEvals: []
                    MaxIter: []
                     TolFun: []
@@ -1012,41 +1022,49 @@ Testing objective function f_d with options:
                   TypicalX: []
                UseParallel: []
 
-===========================================
-Results for n=10
-
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
-
-fminunc stopped because it exceeded the iteration limit,
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_iter','CSHelpWindow');">options.MaxIterations</a> = 400 (the default value).
-
+======================================================
+Results for n= 10
 Calculated minimizer: 
 
-s_d1 =
+x =
 
     0.7976    0.6364    2.8053    3.8166    4.0723    3.9870    3.7920    3.6033    3.4749   11.9926
 
 Calculated Minimum value: -16758.8021
 Norm of gradient at calculated Minimum: 11.9204
-===========================================
-Results for n=100
+         iterations: 401
+          funcCount: 402
+           stepsize: 0.0255
+       cgiterations: 1936
+      firstorderopt: 6.9473
+          algorithm: 'trust-region'
+            message: 'Solver stopped prematurely.↵↵fminunc stopped because it exceeded the iteration limit,↵options.MaxIterations = 400 (the default value).'
+    constrviolation: []
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
-
-fminunc stopped because it exceeded the iteration limit,
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_iter','CSHelpWindow');">options.MaxIterations</a> = 400 (the default value).
-
+====================================================
+Results for n= 100
 Calculated Minimum value: -10968504409.5875
 Norm of gradient at calculated Minimum: 86246.1883
-===========================================
-Results for n=1000
+         iterations: 401
+          funcCount: 402
+           stepsize: 0.1551
+       cgiterations: 8032
+      firstorderopt: 4.6548e+04
+          algorithm: 'trust-region'
+            message: 'Solver stopped prematurely.↵↵fminunc stopped because it exceeded the iteration limit,↵options.MaxIterations = 400 (the default value).'
+    constrviolation: []
 
-<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible','CSHelpWindow');">Local minimum possible</a>.
-
-fminunc stopped because the final change in function value relative to 
-its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance','CSHelpWindow');">function tolerance</a>.
-
-<<a href = "matlab: createExitMsg('sfminle',3.000000e+00,true,true,'fminunc',9.908369e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
-
+====================================================
+Results for n= 1000
 Calculated Minimum value: -1.051215141638858e+16
 Norm of gradient at calculated Minimum: 3110412089.4636
+         iterations: 253
+          funcCount: 254
+           stepsize: 4.9497
+       cgiterations: 818
+      firstorderopt: 4.9217e+08
+          algorithm: 'trust-region'
+            message: 'Local minimum possible.↵↵fminunc stopped because the final change in function value relative to ↵its initial value is less than the default value of the function tolerance.↵↵Stopping criteria details:↵↵Optimization stopped because the relative objective function value is changing↵by less than options.FunctionTolerance = 1.000000e-06.↵↵Optimization Metric                                       Options↵relative change objective =   9.91e-07          FunctionTolerance =   1e-06 (default)'
+    constrviolation: []
+
+====================================================
