@@ -4,22 +4,22 @@ x_val =
 
    1.0e-05 *
 
-    0.1724
-   -0.1690
+    0.2079
+   -0.1852
 
 Minimum at function f value: 
 
 f_val =
 
-   5.8328e-13
+   7.9817e-13
 
 norm of gradient: 
 
 no =
 
-   4.8506e-07
+   6.4204e-07
 
-with 71 iterations and 145 function evals 
+with 73 iterations and 157 function evals 
 ----------------------------------
 Funktion f_b test
 Minimum computed at: 
@@ -32,15 +32,15 @@ Minimum at function f value:
 
 f_val =
 
-   4.2321e-11
+   4.3037e-11
 
 norm of gradient: 
 
 no =
 
-   6.1267e-06
+   6.1783e-06
 
-with 4614 iterations and 20811 function evals 
+with 4319 iterations and 19493 function evals 
 ----------------------------------
 Funktion f_c test
 For n = 10 
@@ -68,9 +68,9 @@ norm of gradient:
 
 no =
 
-   7.6904e-08
+   7.1634e-08
 
-with 89 iterations and 345 function evals 
+with 95 iterations and 328 function evals 
 For n = 100 
 Minimum at function f value: 
 
@@ -82,9 +82,9 @@ norm of gradient:
 
 no =
 
-   2.2556e-06
+   2.8699e-06
 
-with 461 iterations and 2055 function evals 
+with 797 iterations and 3582 function evals 
 For n = 1000 
 Minimum at function f value: 
 
@@ -96,9 +96,9 @@ norm of gradient:
 
 no =
 
-   4.8703e-04
+   3.9574e-04
 
-with 3413 iterations and 18742 function evals 
+with 5535 iterations and 30423 function evals 
 ----------------------------------
 Funktion f_d test
 For n = 10 
@@ -140,11 +140,9 @@ norm of gradient:
 
 no =
 
-   3.6507e+04
+   3.6520e+04
 
-with 10000 iterations and 80002 function evals 
-----------------------------------
-Funktion f_d test
+with 10000 iterations and 80003 function evals 
 For n = 1000 
 Minimum at function f value: 
 
@@ -156,7 +154,7 @@ norm of gradient:
 
 no =
 
-   7.1347e+07
+   7.1346e+07
 
 with 10000 iterations and 110001 function evals 
 ----------------------------------
