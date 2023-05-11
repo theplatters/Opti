@@ -22,6 +22,8 @@ for i=1:length(options)
     [fm,g] = f_aH(s_a);
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
+    disp("===================================================================")
+    
 end
 
 
@@ -39,6 +41,8 @@ for i=1:length(options)
     [fm,g] = f_bH(s_b);
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
+    disp("===================================================================")
+
 end
     
 
@@ -51,21 +55,28 @@ for i=1:length(options)
     disp(options(i));
     
     disp("===================================================================") 
-    
+    disp("Results for n=10")
     s_c1 = fminunc(@f_cH,5*ones(1,10),options(i));
+    
     disp("Calculated minimizer: ");
     s_c1
     [fm,g] = f_cH(s_c1);
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
     
+    disp("===================================================================")
+    disp("Results for n=100")
     s_c2 = fminunc(@f_cH,5*ones(1,100),options(i));
     [fm,g] = f_cH(s_c2);
+    
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
     
+    disp("===================================================================")
+    disp("Results for n=1000")
     s_c3 = fminunc(@f_cH,5*ones(1,1000),options(i));
     [fm,g] = f_cH(s_c3);
+    
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
 end
@@ -81,7 +92,7 @@ for i=1:length(options)
     disp(options(i));
     
     disp("===================================================================")
-  
+    disp("Results for n=10")
     s_d1 = fminunc(@f_dH,[zeros(1,9),100],options(i));
     disp("Calculated minimizer: ") 
     s_d1
@@ -91,20 +102,20 @@ for i=1:length(options)
     disp("Norm of gradient at calculated Minimum: " + norm(g));
     
     disp("===================================================================")
-    
+    disp("Results for n=100")
     s_d2 = fminunc(@f_dH,[zeros(1,99),1000],options(i));
     [fm,g] = f_dH(s_d2);
+    
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
     
     disp("===================================================================")
-    
+    disp("Results for n=1000")
     s_d3 = fminunc(@f_dH,[zeros(1,999),10000],options(i));
     [fm,g] = f_dH(s_d3);
+    
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
-    
-    disp("===================================================================")
 end
 
 
