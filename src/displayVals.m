@@ -9,7 +9,7 @@ function retval = displayVals (x_val, f_val,g_val,iter,evals)
     disp("Minimum at function f value: ");
     f_val
 
-    disp("norm of gradient: ");
+    disp("Norm of gradient: ");
     no = norm(g_val);
     no
 
