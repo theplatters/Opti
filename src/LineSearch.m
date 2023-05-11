@@ -7,9 +7,9 @@ function [x_new,f_new,g_new, exit_flag, alpha, eval] = LineSearch (f, x_old, f_o
     tau2 = 0.6;
     xi1 = 1;
     xi2 = 10;
-    mu1 = 1/4;
+    mu1 = 0.01;
     mu2 = 0.9;
-    sigma = 0.91; %sigma greater than mu1
+    sigma = 0.9; %sigma greater than mu1
     
     %if only 6 arguments are given
     if nargin == 6

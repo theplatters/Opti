@@ -3,6 +3,7 @@ function [f_val, g, H] = f_cH(x)
     if min(x)<=0
         f_val = 10^30; %dummy values
         g = ones(n,1); %dummy values
+        H = zeros(n);
         return
     end
     
