@@ -9,9 +9,9 @@ options3= optimset('Algorithm','trust-region','LargeScale','on','GradObj','on','
 options = [options1,options2,options3];
 
 %(a)
-disp("===================================================================")
+disp("===================================================")
 disp("(A)")
-disp("===================================================================")
+disp("===================================================")
 for i=1:length(options)
     disp("Testing objective function f_a with options: ")
     disp(options(i));
@@ -27,9 +27,9 @@ for i=1:length(options)
 end
 
 
-disp("===================================================================")
+disp("===================================================")
 disp("(B)")
-disp("===================================================================")
+disp("===================================================")
 for i=1:length(options)
     disp("Testing objective function f_b with options: ")
     disp(options(i));
@@ -46,16 +46,18 @@ for i=1:length(options)
 end
     
 
-disp("===================================================================")
+disp("===================================================")
 disp("C")
-disp("===================================================================")
+disp("===================================================")
 
 for i=1:length(options)
     disp("Testing objective function f_c with options: ")
     disp(options(i));
     
+
     disp("===================================================================") 
     disp("Results for n=10")
+
     s_c1 = fminunc(@f_cH,5*ones(1,10),options(i));
     
     disp("Calculated minimizer: ");
@@ -83,16 +85,17 @@ end
 
 
 
-disp("===================================================================")
+disp("===================================================")
 disp("(D)")
-disp("===================================================================")
+disp("===================================================")
 
 for i=1:length(options)
     disp("Testing objective function f_d with options: ")
     disp(options(i));
-    
+
     disp("===================================================================")
     disp("Results for n=10")
+
     s_d1 = fminunc(@f_dH,[zeros(1,9),100],options(i));
     disp("Calculated minimizer: ") 
     s_d1
@@ -101,21 +104,26 @@ for i=1:length(options)
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
     
+
     disp("===================================================================")
     disp("Results for n=100")
+
     s_d2 = fminunc(@f_dH,[zeros(1,99),1000],options(i));
     [fm,g] = f_dH(s_d2);
     
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
     
+
     disp("===================================================================")
     disp("Results for n=1000")
+
     s_d3 = fminunc(@f_dH,[zeros(1,999),10000],options(i));
     [fm,g] = f_dH(s_d3);
     
     disp("Calculated Minimum value: " + fm);
     disp("Norm of gradient at calculated Minimum: " + norm(g));
+
 end
 
 
