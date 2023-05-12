@@ -230,6 +230,24 @@
 	\lstinputlisting{src/Pract1Ex3 output.txt}
 	
     \subsection{Interpretation}
+
+    \begin{center}
+        \begin{tabular}{c|c|c|c}
+        \hline
+        Function &\texttt{fminsearch} output description&Minimum value&\\
+        \texttt{f_a}&&$-16769.7156$&$0.029042$&54&/\\
+        \texttt{f_b}&&$-16769.7156$&$0.029042$&54&/\\
+        
+        \texttt{f_c} n = 10 &&$-16769.7156$&$0.029042$&54&/\\
+
+        \texttt{f_b}&&$-16769.7156$&$0.029042$&54&/\\
+
+        \texttt{f_b}&&$-16769.7156$&$0.029042$&54&/\\
+
+        \hline
+        \end{tabular}
+    \end{center}
+
     \textbf{Disclaimer}: fminsearch doesn't use the Hessian NOR the gradient, so for better efficiency we added a "if nargout $> 1$" clause so that the gradient wouldn't be evaluated every time.
     
     Both $f_a$ and $f_b$ converge to the desired solution very fast, though they need significantly more iterations than fminunc.
