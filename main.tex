@@ -46,7 +46,7 @@
 }
 
 \title{Optimization Practical Exercise \\ Sommersemester 2023}
-\author{Donnermair Maximilian k12005908@students.jku.at\\ Fromherz Jakob k12011689@students.jku.at\\Haslhofer Eva-Maria  k12007773@students.jku.at \\ Scharnreitner Franz @students.jku.at\\ Weiss Hannah k12021111@students.jku.at } %Bitte Matrikelnummer in Email einfügen
+\author{Donnermair Maximilian k12005908@students.jku.at\\ Fromherz Jakob k12011689@students.jku.at\\Haslhofer Eva-Maria  k12007773@students.jku.at \\ Scharnreitner Franz @students.jku.at\\ Weiss Hannah Maria k12021111@students.jku.at } %Bitte Matrikelnummer in Email einfügen
 \date{12 May 2023}
 
 %Bitte im Folder Code die Programmfiles am Schluss aktualisieren
@@ -244,16 +244,16 @@
 	\subsection{Source Code}
 	\lstinputlisting{src/Prog1Ex4.m}
 	\lstinputlisting{src/test4_1.txt}
-	\subsection{Solution of \texttt{fminsearch}}
-	When applying \texttt{fminsearch} to the problem considering the given non-continuously differentiable function 
+	\subsection{Solution of \texttt{fminunc}}
+	When applying \texttt{fminunc} to the problem considering the given non-continuously differentiable function 
 	\begin{equation*}
 		\min_{x\in\mathbb{R}^2}x_1+10\max\{x_1^2+2x_2^2-1,0\}
 	\end{equation*}
 	we get that $x=(x_1,x_2)\approx(-0.9997,-0.0168)$ solves the above equation where the exact solution should correspond to the vector $\overline{x}=(x_1,x_2)=(-1,0)$. This implies a numerical error of $\Vert x - \overline{x}\Vert \approx 0.0168$ as can be obtained by the \texttt{MATLAB} source code in section 4.1.
-	\subsection{Solution of \texttt{fminunc}}
-	If instead of \texttt{fminsearch} the \texttt{MATLAB} command \texttt{fminunc} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
+	\subsection{Solution of \texttt{fminsearch}}
+	If instead of \texttt{fminunc} the \texttt{MATLAB} command \texttt{fminsearch} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
 	\subsection{Interpretation}
-	In the \texttt{MATLAB} output it states that \texttt{fminsearch} stopped because it cannot decrease the objective function along the current search direction any further. Though, if stopping criteria details are displayed we get the following additional information.
+	In the \texttt{MATLAB} output it states that \texttt{fminunc} stopped because it cannot decrease the objective function along the current search direction any further. Though, if stopping criteria details are displayed we get the following additional information.
 	\lstinputlisting{src/test4_2.txt}
-	Consequently, it must be the case that the simplex search method of \texttt{fminsearch} which does not make use of numerical or analytic gradients as the line search algorithm in \texttt{fminunc} is not appropriate for the considered problem. On the opposite, \texttt{fminunc} estimates according gradients using finite differences and therefore provides an adequate line search interval and ultimately a more reliable result.
+	Consequently, it must be the case that the line search algorithm in \texttt{fminunc} which makes use of numerical respectively analytic gradients is not appropriate for the considered problem. On the opposite, the simplex search method of \texttt{fminsearch} does not estimate according gradients using finite differences and therefore provides an adequate line search interval and ultimately a more reliable result. 
 \end{document}
