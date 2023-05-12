@@ -230,6 +230,24 @@
 	\lstinputlisting{src/Pract1Ex3 output.txt}
 	
     \subsection{Interpretation}
+
+    \begin{center}
+        \begin{tabular}{c|c|c|c}
+        \hline
+        Function &\texttt{fminsearch} output description&Minimum value&\\
+        \texttt{f_a}&&$-16769.7156$&$0.029042$&54&/\\
+        \texttt{f_b}&&$-16769.7156$&$0.029042$&54&/\\
+        
+        \texttt{f_c} n = 10 &&$-16769.7156$&$0.029042$&54&/\\
+
+        \texttt{f_b}&&$-16769.7156$&$0.029042$&54&/\\
+
+        \texttt{f_b}&&$-16769.7156$&$0.029042$&54&/\\
+
+        \hline
+        \end{tabular}
+    \end{center}
+
     \textbf{Disclaimer}: fminsearch doesn't use the Hessian NOR the gradient, so for better efficiency we added a "if nargout $> 1$" clause so that the gradient wouldn't be evaluated every time.
     
     Both $f_a$ and $f_b$ converge to the desired solution very fast, though they need significantly more iterations than fminunc.
@@ -244,14 +262,14 @@
 	\subsection{Source Code}
 	\lstinputlisting{src/Prog1Ex4.m}
 	\lstinputlisting{src/test4_1.txt}
-	\subsection{Solution of \texttt{fminsearch}}
-	When applying \texttt{fminsearch} to the problem considering the given non-continuously differentiable function 
+	\subsection{Solution of \texttt{fminunc}}
+	When applying \texttt{fminunc} to the problem considering the given non-continuously differentiable function 
 	\begin{equation*}
 		\min_{x\in\mathbb{R}^2}x_1+10\max\{x_1^2+2x_2^2-1,0\}
 	\end{equation*}
 	we get that $x=(x_1,x_2)\approx(-0.9997,-0.0168)$ solves the above equation where the exact solution should correspond to the vector $\overline{x}=(x_1,x_2)=(-1,0)$. This implies a numerical error of $\Vert x - \overline{x}\Vert \approx 0.0168$ as can be obtained by the \texttt{MATLAB} source code in section 4.1.
-	\subsection{Solution of \texttt{fminunc}}
-	If instead of \texttt{fminsearch} the \texttt{MATLAB} command \texttt{fminunc} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
+	\subsection{Solution of \texttt{fminsearch}}
+	If instead of \texttt{fminunc} the \texttt{MATLAB} command \texttt{fminsearch} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
 	\subsection{Interpretation}
 	In the \texttt{MATLAB} output it states that \texttt{fminsearch} stopped because it cannot decrease the objective function along the current search direction any further. Though, if stopping criteria details are displayed we get the following additional information.
 	\lstinputlisting{src/test4_2.txt}
