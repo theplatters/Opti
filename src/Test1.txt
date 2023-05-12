@@ -220,6 +220,7 @@ x =
 
 Calculated Minimum value: 2.0406e-07
 Norm of gradient at calculated Minimum: 0.00079236
+Condition of Hessian at calculated Minimum: 10
          iterations: 12
           funcCount: 13
            stepsize: 0.0025
@@ -446,6 +447,7 @@ x =
 
 Calculated Minimum value: 1.931e-17
 Norm of gradient at calculated Minimum: 3.3208e-08
+Condition of Hessian at calculated Minimum: 2508.0095
          iterations: 30
           funcCount: 31
            stepsize: 2.3363e-05
@@ -726,6 +728,7 @@ x =
 
 Calculated Minimum value: -19.9644
 Norm of gradient at calculated Minimum: 0.00012999
+Condition of Hessian at calculated Minimum: 10.523
          iterations: 12
           funcCount: 13
            stepsize: 0.0015
@@ -739,6 +742,7 @@ Norm of gradient at calculated Minimum: 0.00012999
 Results for n= 100
 Calculated Minimum value: -1857.764
 Norm of gradient at calculated Minimum: 1.8685e-07
+Condition of Hessian at calculated Minimum: 100.0717
          iterations: 11
           funcCount: 12
            stepsize: 2.2483e-05
@@ -752,6 +756,7 @@ Norm of gradient at calculated Minimum: 1.8685e-07
 Results for n= 1000
 Calculated Minimum value: -184123.6576
 Norm of gradient at calculated Minimum: 0.0010339
+Condition of Hessian at calculated Minimum: 999.9952
          iterations: 16
           funcCount: 17
            stepsize: 0.0087
@@ -1032,6 +1037,7 @@ x =
 
 Calculated Minimum value: -16758.8021
 Norm of gradient at calculated Minimum: 11.9204
+Condition of Hessian at calculated Minimum: 1254.7567
          iterations: 401
           funcCount: 402
            stepsize: 0.0255
@@ -1045,6 +1051,7 @@ Norm of gradient at calculated Minimum: 11.9204
 Results for n= 100
 Calculated Minimum value: -10968504409.5875
 Norm of gradient at calculated Minimum: 86246.1883
+Condition of Hessian at calculated Minimum: 15458.5502
          iterations: 401
           funcCount: 402
            stepsize: 0.1551
@@ -1058,6 +1065,7 @@ Norm of gradient at calculated Minimum: 86246.1883
 Results for n= 1000
 Calculated Minimum value: -1.051215141638858e+16
 Norm of gradient at calculated Minimum: 3110412089.4636
+Condition of Hessian at calculated Minimum: 203328.5383
          iterations: 253
           funcCount: 254
            stepsize: 4.9497

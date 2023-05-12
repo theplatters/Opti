@@ -1,0 +1,156 @@
+===================== (a) =================
+Elapsed time is 0.012591 seconds.
+
+Solution found at: [  -3.79534e-05  1.22752e-05  ]
+Function value: 0.00000000
+
+
+output = 
+
+  struct with fields:
+
+    iterations: 52
+     funcCount: 97
+     algorithm: 'Nelder-Mead simplex direct search'
+       message: 'Optimization terminated:↵ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 ↵ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 ↵'
+
+===================== (b) =================
+Elapsed time is 0.010781 seconds.
+
+Solution found at: [  0.999991  0.999983  ]
+Function value: 0.00000000
+
+
+output = 
+
+  struct with fields:
+
+    iterations: 105
+     funcCount: 195
+     algorithm: 'Nelder-Mead simplex direct search'
+       message: 'Optimization terminated:↵ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 ↵ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 ↵'
+
+===================== (c) =================
+SIZE: n = 10^1
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 53.708279 
+
+Elapsed time is 0.183353 seconds.
+Iterations or function evaluations exceeded options.
+
+===> increase MaxFunEvals (default: 200*#variables) to 100000
+Now:
+
+Exiting: Maximum number of iterations has been exceeded
+         - increase MaxIter option.
+         Current function value: 53.625224 
+
+===> increase MaxIter (same default) to 100000
+Now:
+
+SIZE: n = 10^1
+Elapsed time is 0.140587 seconds.
+
+Solution found at: [
+0.394952
+0.381119
+0.376755
+0.374441
+0.373128
+0.372251
+0.37164
+0.371131
+0.370765
+0.370491
+]
+Function value: -19.96439719
+
+output = 
+
+  struct with fields:
+
+    iterations: 3883
+     funcCount: 5422
+     algorithm: 'Nelder-Mead simplex direct search'
+       message: 'Optimization terminated:↵ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 ↵ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 ↵'
+
+SIZE: n = 10^2
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 28071.812796 
+
+Elapsed time is 279.552686 seconds.
+Iterations or function evaluations exceeded options.
+
+===> increase both Max-values to 1000000
+Now:
+
+SIZE: n = 10^2
+Elapsed time is 783.989220 seconds.
+
+Function value: 27997.73143250
+
+output = 
+
+  struct with fields:
+
+    iterations: 358765
+     funcCount: 385746
+     algorithm: 'Nelder-Mead simplex direct search'
+       message: 'Optimization terminated:↵ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 ↵ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 ↵'
+
+SIZE: n = 10^3
+Operation terminated by user during fminsearch (line 322)
+
+===================== (d) =================
+SIZE: n = 10^1
+Elapsed time is 0.012700 seconds.
+
+Solution found at: [
+0.482444
+0.863983
+1.8512
+11.5311
+7.55222
+-7.94144
+-0.775348
+-0.633636
+-5.43603
+31.9502
+]
+Function value: -16468.38764339
+
+output = 
+
+  struct with fields:
+
+    iterations: 1098
+     funcCount: 1642
+     algorithm: 'Nelder-Mead simplex direct search'
+       message: 'Optimization terminated:↵ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 ↵ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 ↵'
+
+SIZE: n = 10^2
+Elapsed time is 7.013846 seconds.
+
+Function value: -10409439951.64850044
+
+output = 
+
+  struct with fields:
+
+    iterations: 142685
+     funcCount: 152272
+     algorithm: 'Nelder-Mead simplex direct search'
+       message: 'Optimization terminated:↵ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 ↵ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 ↵'
+
+SIZE: n = 10^3
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -8563658281094496.000000 
+
+Elapsed time is 3127.988139 seconds.
+Iterations or function evaluations exceeded options.
