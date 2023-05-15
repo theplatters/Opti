@@ -33,7 +33,7 @@ x0 = [0.375,-1.25]
 prob = OptimizationProblem(f,g,H,x0)
 
 xks = [x0]
-xk = newton(prob)
+xk = newton(prob,10^-8,4)
 
 cond(prob.hessian(xk))
 
