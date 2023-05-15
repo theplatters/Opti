@@ -46,7 +46,7 @@
 }
 
 \title{Optimization Practical Exercise \\ Sommersemester 2023}
-\author{Donnermair Maximilian k12005908@students.jku.at\\ Fromherz Jakob k12011689@students.jku.at\\Haslhofer Eva-Maria  k12007773@students.jku.at \\ Scharnreitner Franz @students.jku.at\\ Weiss Hannah k12021111@students.jku.at } %Bitte Matrikelnummer in Email einfügen
+\author{Donnermair Maximilian k12005908@students.jku.at\\ Fromherz Jakob k12011689@students.jku.at\\Haslhofer Eva-Maria  k12007773@students.jku.at \\ Scharnreitner Franz k12011695@students.jku.at\\ Weiss Hannah Maria k12021111@students.jku.at } %Bitte Matrikelnummer in Email einfügen
 \date{12 May 2023}
 
 %Bitte im Folder Code die Programmfiles am Schluss aktualisieren
@@ -84,11 +84,11 @@
 	\subsection{Interpretation}
 	We can see, that the SteepestDescent works for f\_a relatively well, while to get a relatively good result for f\_b we already need $>4000$ iterations.
 	f\_c works quite well, although the number of iterations needed grows fast with increase in dimension size. The algorithm fails to work for f\_d however for big dimensions.\\
-    We want to analyze this behavior with Theorem 4.5 of our script. Therefore, we calculate with the help of the functions f\_aH to f\_dH from Exercise 2 the condition numbers in our calculated minimum.
+    We want to analyze this behavior with Theorem 4.5 of our script. Therefore, we calculate with the help of the functions f\_aH to f\_dH from Exercise 2 the condition numbers in our calculated minimum. If we are not too far away from the minimum we get a good approximation of the hessian (because the hessian is continuous, furthermore we can see, that the condition number oh the hessians at the calculated minima in exercise two are roughly the same, especially in order of magnitude) and therefore the condition number is near the calculated value.
      Then we calculate the upper bound of the convergence rate $Q1(f^k)<1-\eta*\frac{4*\kappa}{(1+\kappa)^2}$.For the chosen values $\mu_1= 0.01$ and $\sigma=0.9$, we get $\eta=0.0396$.\\
      We get the output: 
     \lstinputlisting{src/test1_cond.txt}
-    The condition number of the hessian of our calculated minimum of f\_a is 10 and the theorem tells us that the convergence rate is smaller than 0.9869. It converges very fast (our theorem only gives us an upper bound). The condition number of the hessian of f\_b in the calculated minimum is 2508, the upper bound for the convergence rate is 0.9999. The algorithm converges quite slowly. The condition number of the hessian of f\_c for n=10 in the calculated minimum is 10.5233, the upper bound 0.9874. This is better than for f\_b. When we increase n the condition matrix and the upper bound increases. The condition number of the hessian of f\_d for n=10 in the calculated minimum is 1256, the upper bound 0.9999, quite near to 1.As we increase the dimension the upper bound in rounded to 1.
+    The condition number of the hessian of our calculated minimum of f\_a is 10 and the theorem tells us that the convergence rate is smaller than 0.9869. It converges very fast (our theorem only gives us an upper bound). The condition number of the hessian of f\_b in the calculated minimum is 2508, the upper bound for the convergence rate is 0.9999. The algorithm converges quite slowly. The condition number of the hessian of f\_c for n=10 in the calculated minimum is 10.5233, the upper bound 0.9874. This is better than for f\_b. When we increase n the condition matrix and the upper bound increases. The condition number of the hessian of f\_d for n=10 in the calculated minimum is 1256, the upper bound 0.9999, quite near to 1. As we increase the dimension the upper bound in rounded to 1.
 	
 	\section{Exercise 2}
 	\subsection{Testfunctions a) to d) with Hessian}
@@ -230,6 +230,23 @@
 	\lstinputlisting{src/Pract1Ex3 output.txt}
 	
     \subsection{Interpretation}
+
+    \begin{center}
+        \begin{tabular}{ |c|c|c|c| }
+        \hline
+        Function & n & \texttt{fminsearch} output description & Function value\\
+        f_a & - & termination criteria satisfied & 0 \\
+        f_b & - & termination criteria satisfied &  0 \\
+        f_c & 10 & termination criteria satisfied & 53.625224 \\
+        f_c & 100 & termination criteria satisfied & 783.989220 \\
+        f_c & 1000 & terminated because it took too long & - \\
+        f_d & 10 & termination criteria satisfied & −16468.38764339 \\
+        f_d & 100 & termination criteria satisfied & −10409439951.64850044 \\
+        f_d & 1000 & Maximum funevals exceeded & - \\
+        \hline
+        \end{tabular}
+    \end{center}
+
     \textbf{Disclaimer}: fminsearch doesn't use the Hessian NOR the gradient, so for better efficiency we added a "if nargout $> 1$" clause so that the gradient wouldn't be evaluated every time.
     
     Both $f_a$ and $f_b$ converge to the desired solution very fast, though they need significantly more iterations than fminunc.
@@ -244,16 +261,16 @@
 	\subsection{Source Code}
 	\lstinputlisting{src/Prog1Ex4.m}
 	\lstinputlisting{src/test4_1.txt}
-	\subsection{Solution of \texttt{fminsearch}}
-	When applying \texttt{fminsearch} to the problem considering the given non-continuously differentiable function 
+	\subsection{Solution of \texttt{fminunc}}
+	When applying \texttt{fminunc} to the problem considering the given non-continuously differentiable function 
 	\begin{equation*}
 		\min_{x\in\mathbb{R}^2}x_1+10\max\{x_1^2+2x_2^2-1,0\}
 	\end{equation*}
 	we get that $x=(x_1,x_2)\approx(-0.9997,-0.0168)$ solves the above equation where the exact solution should correspond to the vector $\overline{x}=(x_1,x_2)=(-1,0)$. This implies a numerical error of $\Vert x - \overline{x}\Vert \approx 0.0168$ as can be obtained by the \texttt{MATLAB} source code in section 4.1.
-	\subsection{Solution of \texttt{fminunc}}
-	If instead of \texttt{fminsearch} the \texttt{MATLAB} command \texttt{fminunc} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
+	\subsection{Solution of \texttt{fminsearch}}
+	If instead of \texttt{fminunc} the \texttt{MATLAB} command \texttt{fminsearch} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
 	\subsection{Interpretation}
-	In the \texttt{MATLAB} output it states that \texttt{fminsearch} stopped because it cannot decrease the objective function along the current search direction any further. Though, if stopping criteria details are displayed we get the following additional information.
+	In the \texttt{MATLAB} output it states that \texttt{fminunc} stopped because it cannot decrease the objective function along the current search direction any further. Though, if stopping criteria details are displayed we get the following additional information.
 	\lstinputlisting{src/test4_2.txt}
-	Consequently, it must be the case that the simplex search method of \texttt{fminsearch} which does not make use of numerical or analytic gradients as the line search algorithm in \texttt{fminunc} is not appropriate for the considered problem. On the opposite, \texttt{fminunc} estimates according gradients using finite differences and therefore provides an adequate line search interval and ultimately a more reliable result.
+	Consequently, it must be the case that the line search algorithm in \texttt{fminunc} which makes use of numerical respectively analytic gradients is not appropriate for the considered problem. On the opposite, the simplex search method of \texttt{fminsearch} does not estimate according gradients using finite differences and therefore provides an adequate line search interval and ultimately a more reliable result. 
 \end{document}
