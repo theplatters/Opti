@@ -1,0 +1,3 @@
+Optimization stopped because the objective function cannot be decreased in the 
+current search direction. Either the predicted change in the objective function,
+or the line search interval is less than eps.

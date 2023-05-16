@@ -1,0 +1,36 @@
+>> testex1_cond
+
+Funktion f_a test
+Condition number of H in calculated minimum  10.0000 
+Upper bound for convergence rate 0.9869 
+----------------------------------
+Funktion f_b test
+Condition number of H in calculated minimum  2507.9466 
+Upper bound for convergence rate 0.9999 
+----------------------------------
+Funktion f_c test
+For n = 10 
+Condition number of H in calculated minimum  10.5232 
+Upper bound for convergence rate 0.9874 
+
+For n = 100 
+Condition number of H in calculated minimum  100.0715 
+Upper bound for convergence rate 0.9984 
+
+For n = 1000 
+Condition number of H in calculated minimum  1000.3861 
+Upper bound for convergence rate 0.9998 
+
+----------------------------------
+Funktion f_d test
+For n = 10 
+Condition number of H in calculated minimum  1256.3686 
+Upper bound for convergence rate 0.9999 
+
+For n = 100 
+Condition number of H in calculated minimum  15456.3922 
+Upper bound for convergence rate 1.0000
+
+For n = 1000 
+Condition number of H in calculated minimum  203338.7870 
+Upper bound for convergence rate 1.0000 

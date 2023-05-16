@@ -1,0 +1,162 @@
+Funktion f_a test
+Minimum computed at: 
+x_val =
+
+   1.0e-05 *
+
+    0.1724
+   -0.1690
+
+Minimum at function f value: 
+
+f_val =
+
+   5.8328e-13
+
+norm of gradient: 
+
+no =
+
+   4.8506e-07
+
+with 71 iterations and 145 function evals 
+----------------------------------
+Funktion f_b test
+Minimum computed at: 
+x_val =
+
+    1.0000
+    1.0000
+
+Minimum at function f value: 
+
+f_val =
+
+   4.2321e-11
+
+norm of gradient: 
+
+no =
+
+   6.1267e-06
+
+with 4614 iterations and 20811 function evals 
+----------------------------------
+Funktion f_c test
+For n = 10 
+Minimum computed at: 
+x_val =
+
+    0.3949
+    0.3811
+    0.3767
+    0.3745
+    0.3731
+    0.3722
+    0.3716
+    0.3712
+    0.3708
+    0.3705
+
+Minimum at function f value: 
+
+f_val =
+
+  -19.9644
+
+norm of gradient: 
+
+no =
+
+   7.6904e-08
+
+with 89 iterations and 345 function evals 
+For n = 100 
+Minimum at function f value: 
+
+f_val =
+
+  -1.8578e+03
+
+norm of gradient: 
+
+no =
+
+   2.2556e-06
+
+with 461 iterations and 2055 function evals 
+For n = 1000 
+Minimum at function f value: 
+
+f_val =
+
+  -1.8412e+05
+
+norm of gradient: 
+
+no =
+
+   4.8703e-04
+
+with 3413 iterations and 18742 function evals 
+----------------------------------
+Funktion f_d test
+For n = 10 
+Minimum computed at: 
+x_val =
+
+    0.7074
+    1.4125
+    2.1185
+    2.8354
+    3.5448
+    4.2462
+    4.9424
+    5.6360
+    6.3286
+    7.1201
+
+Minimum at function f value: 
+
+f_val =
+
+  -1.6770e+04
+
+norm of gradient: 
+
+no =
+
+    0.0436
+
+with 10000 iterations and 50003 function evals 
+For n = 100 
+Minimum at function f value: 
+
+f_val =
+
+  -1.0983e+10
+
+norm of gradient: 
+
+no =
+
+   3.6507e+04
+
+with 10000 iterations and 80002 function evals 
+----------------------------------
+Funktion f_d test
+For n = 1000 
+Minimum at function f value: 
+
+f_val =
+
+  -1.0513e+16
+
+norm of gradient: 
+
+no =
+
+   7.1347e+07
+
+with 10000 iterations and 110001 function evals 
+----------------------------------

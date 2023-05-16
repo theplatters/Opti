@@ -1,0 +1,276 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{matlab-prettifier}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp,xcolor}
+\definecolor{MatlabCellColour}{RGB}{252,251,220}
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\usepackage{geometry,lipsum}% http://ctan.org/pkg/{geometry,lipsum}
+
+% default
+\geometry{margin=3in}% 1in margin
+\geometry{margin=2.5cm}% 1cm margin
+
+
+\lstset{ 
+	backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+	basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+	breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+	breaklines=true,                 % sets automatic line breaking
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	deletekeywords={...},            % if you want to delete keywords from the given language
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	language=Matlab,                 % the language of the code
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores 
+	stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{mymauve},     % string literal style
+	tabsize=4,	                   % sets default tabsize to 2 spaces
+	title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\title{Optimization Practical Exercise \\ Sommersemester 2023}
+\author{Donnermair Maximilian k12005908@students.jku.at\\ Fromherz Jakob k12011689@students.jku.at\\Haslhofer Eva-Maria  k12007773@students.jku.at \\ Scharnreitner Franz k12011695@students.jku.at\\ Weiss Hannah Maria k12021111@students.jku.at } %Bitte Matrikelnummer in Email einfügen
+\date{12 May 2023}
+
+%Bitte im Folder Code die Programmfiles am Schluss aktualisieren
+\begin{document}
+	\maketitle
+	
+	\newpage
+	
+	\section{Exercise 1}
+	
+	\subsection{Linesearch Algorithm with Wolfe-Powell Condition}
+	\lstinputlisting{src/LineSearch.m}
+	
+	\subsection{Method of steepest descent}
+	\lstinputlisting{src/SteepestDescent.m}
+	
+	
+	\subsection{Testfunctions a) to d)}
+	\lstinputlisting{src/f_a.m}
+	
+	\lstinputlisting{src/f_b.m}
+	
+	\lstinputlisting{src/f_c.m}
+	
+	\lstinputlisting{src/f_d.m}
+	
+	\subsection{Testscript}
+	
+	\lstinputlisting{src/testex1.m}
+	With a quick printing function.
+	\lstinputlisting{src/displayVals.m}
+	
+	We get the output
+	\lstinputlisting{src/test1.txt}
+	\subsection{Interpretation}
+	We can see, that the SteepestDescent works for f\_a relatively well, while to get a relatively good result for f\_b we already need $>4000$ iterations.
+	f\_c works quite well, although the number of iterations needed grows fast with increase in dimension size. The algorithm fails to work for f\_d however for big dimensions.\\
+    We want to analyze this behavior with Theorem 4.5 of our script. Therefore, we calculate with the help of the functions f\_aH to f\_dH from Exercise 2 the condition numbers in our calculated minimum. If we are not too far away from the minimum we get a good approximation of the hessian (because the hessian is continuous, furthermore we can see, that the condition number oh the hessians at the calculated minima in exercise two are roughly the same, especially in order of magnitude) and therefore the condition number is near the calculated value.
+     Then we calculate the upper bound of the convergence rate $Q1(f^k)<1-\eta*\frac{4*\kappa}{(1+\kappa)^2}$.For the chosen values $\mu_1= 0.01$ and $\sigma=0.9$, we get $\eta=0.0396$.\\
+     We get the output: 
+    \lstinputlisting{src/test1_cond.txt}
+    The condition number of the hessian of our calculated minimum of f\_a is 10 and the theorem tells us that the convergence rate is smaller than 0.9869. It converges very fast (our theorem only gives us an upper bound). The condition number of the hessian of f\_b in the calculated minimum is 2508, the upper bound for the convergence rate is 0.9999. The algorithm converges quite slowly. The condition number of the hessian of f\_c for n=10 in the calculated minimum is 10.5233, the upper bound 0.9874. This is better than for f\_b. When we increase n the condition matrix and the upper bound increases. The condition number of the hessian of f\_d for n=10 in the calculated minimum is 1256, the upper bound 0.9999, quite near to 1. As we increase the dimension the upper bound in rounded to 1.
+	
+	\section{Exercise 2}
+	\subsection{Testfunctions a) to d) with Hessian}
+	\lstinputlisting{src/f_aH.m}
+	\lstinputlisting{src/f_bH.m}
+	\lstinputlisting{src/f_cH.m}
+	\lstinputlisting{src/f_dH.m}
+	
+	\subsection{Tests in Exercise 2}
+	\lstinputlisting{src/Prog1Ex2.m}
+    \subsection{Test output}
+    As can be observed, for every testfunction and every given starting value \texttt{fminunc} was called with the three required options.
+    Running \texttt{Prog1Ex2.m} produces the output below (console output logged using \texttt{Matlab}-diary functionality)
+    
+    \lstinputlisting{src/Test1.txt}
+	
+	\subsection{Interpretation}
+    
+    We will proceed to extract the relevant information of the above output for every function tested.
+    For the subsequent sections we will use the following notation
+    \begin{enumerate}
+        \item O1 : LargeScale = off, GradObj = on
+        \item O2 : LargeScale = on, GradObj = on, Hessian = off
+        \item O3 : LargeScale = on, GradObj = on, Hessian = on
+    \end{enumerate}
+    Also notice that the default "quasi-newton" algorithm used in \texttt{fminunc} does not make use of a provided Hessian, therefore the algorithm has been changed to "trust-region" in O3 when an analytic Hessian is supplied. Additionally, where an analytic Hessian is supplied (i.e. O3) the condition of the Hessian at the approximated minimizer has been calculated.
+    \subsubsection{\texttt{f\_a}}
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c}
+    \hline
+    Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+    O1&Local Min found&$1.1571 \cdot 10^{-13}$&$5.8763 \cdot 10^{-7}$&8&/\\
+    O2&Local Min found&$1.157 \cdot10^{-13}$&$5.8763 \cdot10^{-7}$&8&/\\
+    O3&Local Min possible&$2.0406\cdot10^{-7}$&$0.00079236$&12&10\\
+    \hline
+    \end{tabular}
+    \end{center}
+    All options yield a very small minimum value after few iterations, however comparing the order of magnitude of the different ouputs (i.e. calculated minimal values and norms of gradients at calculated minimum) one notices, that O1 and O2 seem to be about twice as accurate (i.e. square of the error in O3) as O3 while also needing fewer iterations. An educated guess would attribute this rather strange disparity to the use of different algorithms in O1,O2 ("quasi-newton") and O3("trust-region"). 
+
+    \subsubsection{\texttt{f\_b}}
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c}
+    \hline
+    Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+    O1&Local Min found&$6.6115e-11$&$0.00029178$&39&/\\
+    O2&Local Min found&$6.6115e-11$&$0.00029178$&39&/\\
+    O3&Local Min possible&$1.931e-17$&$3.3208e-08$&30&2508.0095\\
+    \hline
+    \end{tabular}
+    \end{center}
+    Again all options yield a minimum value very close to zero. This time, however, O3 performs better, in that it calculates a minimizer whose value is smaller by a factor of $10^{-6}$ than that produced by O1, O2  where additionally the norm of the gradient is significantly smaller(by a factor of about $10^{-4}$) than the norm of the gradient of the outputs of O1 and O3. This is not very surprising, given the fact that in O3 an analytic Hessian is supplied, allowing for faster convergence. Interestingly enough, \texttt{fminunc} outputs "local Min possible" with O3, probably due to positive semi-definiteness of the Hessian in the approximated minimizer.
+    
+    \subsubsection{\texttt{f\_c}}
+    \begin{enumerate}
+        \item $n=10$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+        O1&Local Min found&$-19.9644$&$1.0378e-05$&29&/\\
+        O2&Local Min found&$-19.9644$&$1.0378e-05$&29&/\\
+        O3&Local Min possible&$-19.9644$&$0.00012999$&12&10.523\\
+        \hline
+        \end{tabular}
+        \end{center}
+        
+        \item $n=100$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+        O1&Local Min found&$-1857.764$&$0.00082223$&79&/\\
+        O2&Local Min found&$-1857.764$&$0.00082223$&29&/\\
+        O3&Local Min found&$-1857.764$&$1.8685e-07$&11&100.0717\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \item $n=1000$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+        O1&Local Min found&$-184123.6576$&$0.010364$&203&/\\
+        O2&Local Min found&$-184123.6576$&$0.010364$&203&/\\
+        O3&Local Min possible&$-184123.6576$&$0.0010339$&16&999.9952\\
+        \hline
+        \end{tabular}
+        \end{center}     
+    \end{enumerate}
+    For every input (i.e. $n=10,100,1000$) \texttt{fminunc} produced the same result independent of the options used. Differences can be observed in the norms of the gradients at the approximated minimizers and the amount of iterations needed. Here, the most striking contrast can be found for $n=1000$: While O1 and O2 require 2 about 200 iterations, O3 terminates after 16 iterations while also producing an approximated minimizers where the norm of the gradient is smaller than the output of O1,O2 by a factor of $10$. Concerning iterations, O3 seems to perform better allround. For $n=100$ we also obtain an approximate minimizer where the norm of the gradient is smaller by a factor of $10^3$ compared to what O1 and O2 outputs. The fact that for $n=10,1000$ O3 outputs "local minimum possible" may again be attributed to positive semidefiniteness of the Hessian at the approximated minimizer. 
+    
+    \subsubsection{\texttt{f\_d}}
+    \begin{enumerate}
+        \item $n=10$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+        O1&Local Min found&$-16769.7156$&$0.029042$&54&/\\
+        O2&Local Min found&$-16769.7156$&$0.029042$&54&/\\
+        O3&Solver stopped prematurely;&\\ &exceeded it limit&$-16758.8021$&$11.9204$&401&1254.7567\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \item $n=100$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+        O1&Local Min found&$-10987678753.1027$&$13.4558$&78&/\\
+        O2&Local Min found&$-10987678753.1027$&$13.4558$&78&/\\
+        O3&Solver stopped prematurely;&\\ &exceeded it limit&$-10968504409.5875$&$ 86246.1883$&401&15458.5502\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+         \item $n=1000$
+        \begin{center}
+        \begin{tabular}{c|c|c|c|c|c}
+        \hline
+        Option&\texttt{fminunc} output description&Minimum value&Norm of gradient&iterations&cond(H)\\
+        O1&Local Min found&$-1.051366255854342e+16$&$25147.6496$&152&/\\
+        O2&Local Min found&$-1.051366255854342e+16$&$25147.6496$&152&/\\
+         O3&Local Min possible&$-1.051215141638858e+16$&$3110412089.4636$&253&203328.5383\\
+        \hline
+        \end{tabular}
+        \end{center}
+    \end{enumerate}
+        What makes the test of function \texttt{f\_d} above stand out in comparison to the tests beforehand is that \texttt{fminunc} terminates prematurely after having calculated 400 iterations without meeting the default convergence criteria. Observe, that the approximated minimum values of O1 and O2 seem to coincide for all inputs, as does the norm of the gradient and the number of required iterations. We remark, that for $n=100$  and especially for $n=1000$, the norm of the gradient at the calculated minimizer is no longer close to zero, meaning we are no longer "close" to a stationary point, yet \texttt{fminunc}'s output description states "local minimum found". What is even more interesting is the fact, that O3 stops prematurely, needing more than the default maximal number of iterations, when O1 and O2 (without using the Hessian) terminate after a reasonable amount of iterations. This effect might be caused by making use of a badly conditioned Hessian, slowing down convergence. The calculated minimum values of O3 seem to be coinciding to the outputs of O1 and O2 up to some significant digit, increasing the default maxiter bound would allow for more accurate approximation. Striking is the astronomical norm of the gradient in O3 with $n=1000$, yet \texttt{fminunc} describes the output to be a possible local minimum.
+
+	
+	\section{Exercise 3}
+    \subsection{Source Code}
+	\lstinputlisting{src/Pract1Ex3.m}
+
+    \subsection{Output}
+	\lstinputlisting{src/Pract1Ex3 output.txt}
+	
+    \subsection{Interpretation}
+
+    \begin{center}
+        \begin{tabular}{ |c|c|c|c| }
+        \hline
+        Function & n & \texttt{fminsearch} output description & Function value\\
+        f_a & - & termination criteria satisfied & 0 \\
+        f_b & - & termination criteria satisfied &  0 \\
+        f_c & 10 & termination criteria satisfied & 53.625224 \\
+        f_c & 100 & termination criteria satisfied & 783.989220 \\
+        f_c & 1000 & terminated because it took too long & - \\
+        f_d & 10 & termination criteria satisfied & −16468.38764339 \\
+        f_d & 100 & termination criteria satisfied & −10409439951.64850044 \\
+        f_d & 1000 & Maximum funevals exceeded & - \\
+        \hline
+        \end{tabular}
+    \end{center}
+
+    \textbf{Disclaimer}: fminsearch doesn't use the Hessian NOR the gradient, so for better efficiency we added a "if nargout $> 1$" clause so that the gradient wouldn't be evaluated every time.
+    
+    Both $f_a$ and $f_b$ converge to the desired solution very fast, though they need significantly more iterations than fminunc.
+
+    Initially, $f_c$ with n=10 did not terminate with a solution since it immediately put out the message that the maximum number of function evaluations had been exceeded - "increase MaxFunEvals option". After setting this option from the default value (200 times the number of variables = 2000) to 100000, the same message was shown for the maximum number of iterations, so MaxIter was also increased. Now we got a solution, and even the same one as with fminunc.
+
+    With n=100, we had to increase both MaxFunEvals and MaxIter to 1.000.000 to get a result (it needed around 350.000 iterations and 380.000 evaluations). However, the function value was around 28000 in contrast to the -1850 from fminunc, so that can't be correct. Since for n=100, it already didn't even calculate the correct result, it took significantly longer than for n=10, we aborted the calculation for n=1000 after an hour.
+
+    In comparison to fminunc, $f_d$ gave us different solution vectors for x, but the function values came really close to the ones from fminunc, at least until n=100. For n=1000, Matlab reached the maximum number of iterations, 1.000.000, and returned the current value, which was almost -1.e+16, the returned function value from fminunc.
+	
+	\section{Exercise 4}
+	\subsection{Source Code}
+	\lstinputlisting{src/Prog1Ex4.m}
+	\lstinputlisting{src/test4_1.txt}
+	\subsection{Solution of \texttt{fminunc}}
+	When applying \texttt{fminunc} to the problem considering the given non-continuously differentiable function 
+	\begin{equation*}
+		\min_{x\in\mathbb{R}^2}x_1+10\max\{x_1^2+2x_2^2-1,0\}
+	\end{equation*}
+	we get that $x=(x_1,x_2)\approx(-0.9997,-0.0168)$ solves the above equation where the exact solution should correspond to the vector $\overline{x}=(x_1,x_2)=(-1,0)$. This implies a numerical error of $\Vert x - \overline{x}\Vert \approx 0.0168$ as can be obtained by the \texttt{MATLAB} source code in section 4.1.
+	\subsection{Solution of \texttt{fminsearch}}
+	If instead of \texttt{fminunc} the \texttt{MATLAB} command \texttt{fminsearch} is applied to the same problem as in section 4.2 we get the result of $x=(x_1,x_2)\approx(-1.0000,0.0000)$. Consequently, we also get a numerical error much smaller in size and given by $\Vert x - \overline{x}\Vert \approx 4.3007\cdot 10^{-5}$.
+	\subsection{Interpretation}
+	In the \texttt{MATLAB} output it states that \texttt{fminunc} stopped because it cannot decrease the objective function along the current search direction any further. Though, if stopping criteria details are displayed we get the following additional information.
+	\lstinputlisting{src/test4_2.txt}
+	Consequently, it must be the case that the line search algorithm in \texttt{fminunc} which makes use of numerical respectively analytic gradients is not appropriate for the considered problem. On the opposite, the simplex search method of \texttt{fminsearch} does not estimate according gradients using finite differences and therefore provides an adequate line search interval and ultimately a more reliable result. 
+\end{document}

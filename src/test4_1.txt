@@ -1,0 +1,27 @@
+>> Prog1Ex4
+
+Local minimum possible.
+
+fminunc stopped because it cannot decrease the objective function
+along the current search direction.
+
+<stopping criteria details>
+
+s1 =
+
+   -0.9997   -0.0168
+
+
+s2 =
+
+   -1.0000    0.0000
+
+
+e1 =
+
+    0.0168
+
+
+e2 =
+
+   4.3007e-05
