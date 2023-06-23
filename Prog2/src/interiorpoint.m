@@ -1,25 +1,28 @@
-function [outputArg1,ou tputArg2] = interiorpoint(x0 ,mu0, G, d, A, b,alpha)
+function [outputArg1,ou tputArg2] = interiorpoint(x ,mu, G, d, A, b,alpha)
 %check if G is positive definite
 
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05]
 
-m = length(mu0)
-if eig(G) < 0
+m = length(b)
+n = length(x)
+if eig(G) <= 0
 
     ME = MException("Matrix G is not positive definite");
     throw(ME)
 end
 
 
-cb = fsolve(@(cb) G*x0 + d - mu0 * cb(1)  - mu0 * sum(-A ./ (b + mu_0 * cb(2:m+1) - A' * x0)),[1 ones(1,m)]);
-c = cb(1);
-beta = cb(2:m+1);
+sol = fsolve(@(cb) G*x + d - mu * cb(1:n)  - mu * sum(-A ./ (b + mu * cb(n+1:n+m) - A' * x))',ones(n+m,1));
 
+c = sol(1:n)
+beta = sol(n+1:n+m)
+
+lambda = mu ./ (b + beta * mu - A'*x)
 
 while not convergent
    %compute delta_x_c delta_lambda_c
     
-   x = x+ delta_x_c;
+   x = x + delta_x_c;
    lambda = lambda + delta_lambda_c;
 
    %compute delta_x_p delta_lambda_p
