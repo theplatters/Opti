@@ -1,0 +1,61 @@
+>> PractEx2linprog
+===========================
+Dual-simplex algorithm: 
+
+Optimal solution found.
+
+
+output = 
+
+  struct with fields:
+
+         iterations: 2
+    constrviolation: 0
+            message: 'Optimal solution found.'
+          algorithm: 'dual-simplex'
+      firstorderopt: 0
+
+Solution at x = 
+   0.333333333333333
+   0.083333333333333
+   0.166666666666667
+                   0
+
+Function value: 
+    -1
+
+Lagrange multiplicators: 
+    -2
+     1
+     0
+
+===========================
+Interior-point algorithm: 
+Minimum found that satisfies the constraints.
+
+Optimization completed because the objective function is non-decreasing in feasible directions, to within thefunction tolerance, and constraints are satisfied to within the constraint tolerance.
+
+
+output = 
+
+  struct with fields:
+
+         iterations: 3
+            message: 'Minimum found that satisfies the constraints. Optimization completed because the objective function is non-decreasing in feasible directions, to within the function tolerance, and constraints are satisfied to within the constraint tolerance.'
+          algorithm: 'interior-point'
+    constrviolation: 2.130745357931119e-09
+      firstorderopt: 2.130745357931118e-09
+
+Solution at x = 
+   0.558923795987385
+   0.647309491033834
+   0.617847591974769
+                   0
+
+Function value: 
+  -1.000000002130745
+
+Lagrange multiplicators: 
+  -2.000000000000000
+   1.000000000000000
+  -0.000000000000000
