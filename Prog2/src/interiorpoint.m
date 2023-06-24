@@ -5,6 +5,7 @@ sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05];
 
 m = length(b);
 n = length(x);
+
 if eig(G) <= 0
     ME = MException("Matrix G is not positive definite");
     throw(ME);
