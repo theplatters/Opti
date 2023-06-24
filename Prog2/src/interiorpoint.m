@@ -1,4 +1,4 @@
-function [x] = interiorpoint(x ,mu, G, d, A, b,alpha)
+function [x, iter] = interiorpoint(x ,mu, G, d, A, b,alpha)
 %Constraints are the colums of A
 
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
@@ -20,8 +20,8 @@ beta = sol(n+1:end);
 
 lambda = mu ./ (b + beta * mu - A'*x);
 
-k = 1;
-while norm(lambda) <= 10^20 && k <= 100 && all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-10)
+iter = 1;
+while norm(lambda) <= 10^20 && iter <= 1000 && ~all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-10)
    %compute delta_x_c delta_lambda_c
 
    [delta_x_c,delta_lambda_c] = corrector(G,A,x,lambda,mu,b,beta,c,d);
@@ -51,7 +51,7 @@ while norm(lambda) <= 10^20 && k <= 100 && all(abs(gradLagrangian(x,G,d,A,b,lamb
    end
    
    x = x_theta; lambda = lambda_theta; mu = mu_theta;
-   k = k+1
+   iter = iter+1
 end
 
 
