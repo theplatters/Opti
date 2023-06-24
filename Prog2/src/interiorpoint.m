@@ -1,7 +1,7 @@
 function [x] = interiorpoint(x ,mu, G, d, A, b,alpha)
 %Constraints are the colums of A
 
-sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05];
+sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
 
 m = length(b);
 n = length(x);
@@ -12,11 +12,13 @@ if eig(G) <= 0
 end
 
 
-sol = fsolve(@(cb) G*x + d - mu * cb(1:n)  - mu * sum(-A ./ (b + mu * cb(n+1:n+m) - A' * x))',ones(n+m,1));
+sol = fsolve(@(cb) G*x + d + mu * cb(1:n)  + mu * sum(A ./ (b + mu * cb(n+1:end) - A' * x),2),zeros(n+m,1));
 
 c = sol(1:n)
-beta = sol(n+1:n+m)
+beta = sol(n+1:end)
 
+disp(c)
+disp(beta)
 
 lambda = mu ./ (b + beta * mu - A'*x)
 
