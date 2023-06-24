@@ -12,7 +12,7 @@ if eig(G) <= 0
 end
 
 
-sol = fsolve(@(cb) 0.5 * (G' + G) * x + d + mu * cb(1:n)  + mu * sum((1 ./ (b + mu * cb(n+1:end) - A' * x))' .* A,2),100 * ones(n+m,1));
+sol = fsolve(@(cb) 0.5 * (G' + G) * x + d + mu * cb(1:n)  + mu * sum((1 ./ (b + mu * cb(n+1:end) - A' * x))' .* A,2) + A * mu ./ (b + cb(n+1:end) * mu - A' * x),1 * ones(n+m,1));
 
 c = sol(1:n)
 beta = sol(n+1:end)
