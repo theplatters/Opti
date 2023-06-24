@@ -2,8 +2,6 @@ function [isIn] = isInVa(x,lambda,mu,beta,G,d,A,b,c,alpha)
 %ISINVA Summary of this function goes here
 %   Detailed explanation goes here
 
-m = length(lambda);
-
 isIn = false;
 
 v = b + mu * beta - A' * x;
