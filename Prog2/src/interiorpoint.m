@@ -21,7 +21,7 @@ beta = sol(n+1:end);
 lambda = mu ./ (b + beta * mu - A'*x);
 
 k = 1;
-while norm(lambda) <= 10^20 && k <= 100
+while norm(lambda) <= 10^20 && k <= 100 && all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-10)
    %compute delta_x_c delta_lambda_c
 
    [delta_x_c,delta_lambda_c] = corrector(G,A,x,lambda,mu,b,beta,c,d);
