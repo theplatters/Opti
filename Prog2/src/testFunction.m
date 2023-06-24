@@ -6,7 +6,7 @@ G = N^2 * spdiags([-e, 2*e, -e],-1:1,n,n);
 
 d = 3 * ones(n,1);
 
-A = -speye(n);
+A = -eye(n);
 
 b1 = 0.1 * ones(floor(N/3),1);
 b2 =  -0.2 * ones(floor(N/3),1);
