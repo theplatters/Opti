@@ -1,0 +1,199 @@
+>> PractEx2mincon
+Feasible point with lower objective function value found.
+
+Local minimum found that satisfies the constraints.
+
+Optimization completed because the objective function is non-decreasing in feasible directions, to within the value of the optimality tolerance,
+and constraints are satisfied to within the value of the constraint tolerance.
+
+<stopping criteria details>
+
+output = 
+
+  struct with fields:
+
+         iterations: 15
+          funcCount: 97
+    constrviolation: 1.414798111998294e-09
+           stepsize: 4.243968012202901e-05
+          algorithm: 'interior-point'
+      firstorderopt: 1.097342803291212e-06
+       cgiterations: 0
+            message: 'Local minimum found that satisfies the constraints. Optimization completed because the objective function is non-decreasing in feasible directions, to within the value of the optimality tolerance, and constraints are satisfied to within the value of the constraint tolerance. <stopping criteria details> Optimization completed: The relative first-order optimality measure, 8.739226e-07, is less than options.OptimalityTolerance = 1.000000e-06, and the relative maximum constraint violation, 1.414798e-09, is less than options.ConstraintTolerance = 1.000000e-06.'
+       bestfeasible: [1x1 struct]
+
+Solution at x = 
+   2.174700250173866
+   0.650074084149234
+  -0.469732106085542
+  -2.421565838537846
+  -0.491415367312004
+
+Function value: 
+  -7.526414523321016
+
+Feasible point with lower objective function value found.
+
+Local minimum found that satisfies the constraints.
+
+Optimization completed because the objective function is non-decreasing in feasible directions, to within the value of the optimality tolerance,
+and constraints are satisfied to within the value of the constraint tolerance.
+
+<stopping criteria details>
+
+output = 
+
+  struct with fields:
+
+         iterations: 23
+          funcCount: 269
+    constrviolation: 3.778644064311720e-13
+           stepsize: 7.753082096786252e-07
+          algorithm: 'interior-point'
+      firstorderopt: 1.534800981417561e-06
+       cgiterations: 0
+            message: 'Local minimum found that satisfies the constraints. Optimization completed because the objective function is non-decreasing in feasible directions, to within the value of the optimality tolerance, and constraints are satisfied to within the value of the constraint tolerance. <stopping criteria details> Optimization completed: The relative first-order optimality measure, 2.682682e-07, is less than options.OptimalityTolerance = 1.000000e-06, and the relative maximum constraint violation, 3.778644e-13, is less than options.ConstraintTolerance = 1.000000e-06.'
+       bestfeasible: [1x1 struct]
+
+Solution at x = 
+   2.649489983278447
+   1.965516879987249
+   1.293855228241263
+   0.642813977357124
+   0.027358147284852
+  -0.524611687809532
+  -0.959828811256427
+  -1.178745386262668
+  -3.999376549270981
+  -0.438009920955785
+
+Function value: 
+ -34.797269599099451
+
+Feasible point with lower objective function value found.
+
+Local minimum found that satisfies the constraints.
+
+Optimization completed because the objective function is non-decreasing in feasible directions, to within the value of the optimality tolerance,
+and constraints are satisfied to within the value of the constraint tolerance.
+
+<stopping criteria details>
+
+output = 
+
+  struct with fields:
+
+         iterations: 61
+          funcCount: 6356
+    constrviolation: 1.949966743630682e-09
+           stepsize: 4.375571521361438e-05
+          algorithm: 'interior-point'
+      firstorderopt: 1.824752061665436e-04
+       cgiterations: 46
+            message: 'Local minimum found that satisfies the constraints. Optimization completed because the objective function is non-decreasing in feasible directions, to within the value of the optimality tolerance, and constraints are satisfied to within the value of the constraint tolerance. <stopping criteria details> Optimization completed: The relative first-order optimality measure, 6.684862e-07, is less than options.OptimalityTolerance = 1.000000e-06, and the relative maximum constraint violation, 1.949967e-09, is less than options.ConstraintTolerance = 1.000000e-06.'
+       bestfeasible: [1x1 struct]
+
+Solution at x = 
+   2.511251539291919
+   2.461666860698041
+   2.412080854012064
+   2.362494717880177
+   2.312907671043630
+   2.263327904963377
+   2.213744597924715
+   2.164157051160969
+   2.114574570942135
+   2.064992806807287
+   2.015410785544985
+   1.965821119481081
+   1.916244533018802
+   1.866659814534814
+   1.817086118084065
+   1.767497443519273
+   1.717916906343392
+   1.668336496720123
+   1.618763391882664
+   1.569178798557519
+   1.519604888925119
+   1.470030309443097
+   1.420456178437108
+   1.370876613544896
+   1.321301477906204
+   1.271736648503178
+   1.222167285623247
+   1.172590052380952
+   1.123015832845084
+   1.073454440795577
+   1.023890651349000
+   0.974319818737711
+   0.924754459254553
+   0.875194704591935
+   0.825632134664447
+   0.776074272895970
+   0.726517084968910
+   0.676968307557042
+   0.627413760781359
+   0.577864123309363
+   0.528317529326373
+   0.478778926147493
+   0.429235371567303
+   0.379704151690895
+   0.330173908823736
+   0.280642731256052
+   0.231122936284810
+   0.181608220475817
+   0.132094289967643
+   0.082590288449742
+   0.033086682223848
+  -0.016402184228384
+  -0.065886797592639
+  -0.115361582933998
+  -0.164823951017599
+  -0.214283520306151
+  -0.263722196171368
+  -0.313152424734158
+  -0.362567814941125
+  -0.411968202351157
+  -0.461352180077928
+  -0.510715060271311
+  -0.560052811240821
+  -0.609372469869121
+  -0.658662756677004
+  -0.707921828280409
+  -0.757142257531100
+  -0.806330879481920
+  -0.855467978793461
+  -0.904557700868748
+  -0.953587467998872
+  -1.002543601197475
+  -1.051437578962383
+  -1.100237979120285
+  -1.148930049854104
+  -1.197495175243761
+  -1.245923985662271
+  -1.294177028190365
+  -1.342230521581618
+  -1.390035277246707
+  -1.437550973846803
+  -1.484702883313863
+  -1.531406998219249
+  -1.577551884815163
+  -1.623002959269272
+  -1.667560033051231
+  -1.710961858173734
+  -1.752835551119320
+  -1.792670197475223
+  -1.829713712785241
+  -1.862839740118935
+  -1.890322189783064
+  -1.909412521582308
+  -1.915543710959156
+  -1.900796339545419
+  -1.850737053795617
+  -1.737958089803810
+  -1.509930349154490
+ -13.535275413033146
+  -0.404071303354537
+
+Function value: 
+    -3.355844323173781e+03
