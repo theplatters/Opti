@@ -8,7 +8,7 @@ v = b + mu * beta - A' * x;
 w = G * x + d + mu * c + A * lambda;
 s = sum( (lambda .* v ./ mu - 1) .^ 2);
 
-if  all(v > 0) && all(abs(w) <= 10e-14) && all(lambda > 0)  && mu > 0 && s <= alpha^2
+if  all(v > 0) && all(abs(w) <= 10e-10) && all(lambda > 0)  && mu > 0 && s <= alpha^2
     isIn = true;
 end
 

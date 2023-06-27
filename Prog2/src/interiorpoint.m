@@ -1,4 +1,4 @@
-function [x, iter] = interiorpoint(x ,mu, G, d, A, b,alpha)
+function [x, lambda,iter] = interiorpoint(x ,mu, G, d, A, b,alpha)
 %Constraints are the colums of A
 
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
@@ -12,7 +12,7 @@ if eig(G) <= 0
 end
 
 
-sol = fsolve(@(cb) 0.5 * (G' + G) * x + d + mu * cb(1:n)  + mu * sum((1 ./ (b + mu * cb(n+1:end) - A' * x))' .* A,2) + A * mu ./ (b + cb(n+1:end) * mu - A' * x),100 * ones(n+m,1));
+sol = fsolve(@(cb) 0.5 * (G' + G) * x + d + mu * cb(1:n)  + mu * sum((1 ./ (b + mu * cb(n+1:end) - A' * x))' .* A,2) + A * mu ./ (b + cb(n+1:end) * mu - A' * x),1 * ones(n+m,1));
 
 c = sol(1:n);
 beta = sol(n+1:end);
@@ -21,7 +21,11 @@ beta = sol(n+1:end);
 lambda = mu ./ (b + beta * mu - A'*x);
 
 iter = 1;
-while norm(lambda) <= 10^20 && iter <= 1000 && ~all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-10)
+while norm(lambda) <= 10^20 && iter <= 1000
+    
+   if all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-10)
+        return
+   end
    %compute delta_x_c delta_lambda_c
 
    [delta_x_c,delta_lambda_c] = corrector(G,A,x,lambda,mu,b,beta,c,d);
@@ -54,6 +58,8 @@ while norm(lambda) <= 10^20 && iter <= 1000 && ~all(abs(gradLagrangian(x,G,d,A,b
    iter = iter+1
 end
 
+ME = MException("Maximum iterations reached, or lambda too big");
+throw(ME);
 
 end
 
