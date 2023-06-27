@@ -12,13 +12,18 @@ if eig(G) <= 0
 end
 
 
-sol = fsolve(@(cb) 0.5 * (G' + G) * x + d + mu * cb(1:n)  + mu * sum((1 ./ (b + mu * cb(n+1:end) - A' * x))' .* A,2) + A * mu ./ (b + cb(n+1:end) * mu - A' * x),1 * ones(n+m,1));
+%sol = fsolve(@(cb) 0.5 * (G' + G) * x + d + mu * cb(1:n)  + mu * sum((1 ./ (b + mu * cb(n+1:end) - A' * x))' .* A,2) + A * mu ./ (b + cb(n+1:end) * mu - A' * x),1 * ones(n+m,1));
 
-c = sol(1:n);
-beta = sol(n+1:end);
+%c = sol(1:n);
+%beta = sol(n+1:end);
+
+beta = (A' * x - b) / mu + 0.5;
+
+c  = (- 0.5 * (G' + G) * x - d   + mu * sum((1 ./ (b + mu * beta - A' * x))' .* A,2)) / mu
+
+lambda = mu ./ (b + beta * mu - A'*x)
 
 
-lambda = mu ./ (b + beta * mu - A'*x);
 
 iter = 1;
 while norm(lambda) <= 10^20 && iter <= 1000
@@ -55,7 +60,7 @@ while norm(lambda) <= 10^20 && iter <= 1000
    end
    
    x = x_theta; lambda = lambda_theta; mu = mu_theta;
-   iter = iter+1
+   iter = iter+1;
 end
 
 ME = MException("Maximum iterations reached, or lambda too big");
