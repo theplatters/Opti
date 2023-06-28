@@ -14,9 +14,9 @@ end
 
 
 
-beta = (A' * x - b) / mu + 1e10;
+beta = (A' * x - b) / mu + 100;
 
-c  = (- 0.5 * (G' + G) * x - d   + mu * sum((1 ./ (b + mu * beta - A' * x))' .* A,2)) / mu;
+c  = (- 0.5 * (G' + G) * x - d  - mu * sum((1 ./ (b + mu * beta - A' * x))' .* A,2)) / mu;
 
 lambda = mu ./ (b + beta * mu - A'*x);
 
@@ -25,7 +25,7 @@ lambda = mu ./ (b + beta * mu - A'*x);
 iter = 1;
 while norm(lambda) <= 10^20 && iter <= 1000
 
-   if all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-8)
+   if all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-12)
        exitflag = 0;
         return
    end
@@ -47,7 +47,7 @@ while norm(lambda) <= 10^20 && iter <= 1000
    i = 2;
    while ~isInVa(x_theta, lambda_theta, mu_theta,beta,G,d,A,b,c,alpha)
 
-      if( i >= 20)
+      if( i >= 30)
         disp("theta is too small, no solution found");
         exitflag = 1;
         return;
