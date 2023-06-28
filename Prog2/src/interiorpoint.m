@@ -6,8 +6,8 @@ sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
 m = length(b);
 n = length(x);
 
-if eig(G) <= 0
-    ME = MException("Matrix G is not positive definite");
+if eig(G) < 0
+    ME = MException("Interiorpoint:definiteError","Matrix G is not positive definite");
     throw(ME);
 end
 
@@ -45,6 +45,11 @@ while norm(lambda) <= 10^20 && iter <= 1000
    mu_theta = (1-theta) * mu;
    i = 2;
    while ~isInVa(x_theta, lambda_theta, mu_theta,beta,G,d,A,b,c,alpha)
+
+      if( i >= 100)
+        ME = MException("Interiorpoint:InputError","theta is too small, no solution found");
+        throw(ME)
+      end
        if i < length(sequence)
            theta = sequence(i);
        else
@@ -54,6 +59,7 @@ while norm(lambda) <= 10^20 && iter <= 1000
        x_theta = x + theta * delta_x_p;
        lambda_theta = lambda + theta * delta_lambda_p;
        mu_theta = (1-theta) * mu;
+
    end
    
    x = x_theta; lambda = lambda_theta; mu = mu_theta;

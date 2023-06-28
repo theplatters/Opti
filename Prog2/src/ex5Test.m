@@ -1,6 +1,6 @@
 %TEST INTERIORPOINT ALGORITHM
 
-n = 999;
+n = 99;
 
 
 [G,d,A,b] = testFunction(n+1);
