@@ -14,7 +14,7 @@ end
 
 
 
-beta = (A' * x - b) / mu + 100;
+beta = (A' * x - b) / mu + 10e12;
 
 c  = (- 0.5 * (G' + G) * x - d  - mu * sum((1 ./ (b + mu * beta - A' * x))' .* A,2)) / mu;
 
