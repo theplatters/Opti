@@ -1,8 +1,20 @@
-function [x, lambda,exitflag,iter] = interiorpoint(x ,mu, G, d, A, b,alpha,maxiter)
+function [x, lambda,exitflag,iter] = interiorpoint(x , G, d, A, b,mu,alpha,maxiter,deriv)
 %Constraints are the colums of A
+
+if(nargin < 9)
+    deriv = 1;
+end
 
 if(nargin < 8)
     maxiter = 1000;
+end
+
+if(nargin < 7)
+    alpha = 0.25;
+end
+
+if(nargin < 6)
+    mu = 0.1;
 end
 
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
@@ -14,7 +26,7 @@ if eig(G) < 0
 end
 
 
-beta = (A' * x - b) / mu + 1;
+beta = (A' * x - b) / mu + deriv;
 
 c  = (- 0.5 * (G' + G) * x - d  - mu * sum((1 ./ (b + mu * beta - A' * x))' .* A,2)) / mu;
 

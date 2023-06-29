@@ -17,7 +17,7 @@ for n = [9,99,999]
     mu0 = 0.1;
     f = @(x) 1/2 * x' * G * x + d' * x;
     
-    [x,lambda,exitflag, iter] = interiorpoint(x0,mu0,G,d,A,b,alpha);
+    [x,lambda,exitflag, iter] = interiorpoint(x0,G,d,A,b,mu0,alpha);
     x2 = fmincon(@(x) 0.5 *x' * G * x + d'*x,x0,A',b);
     
     outputViolations = max(abs(min(b - A'*x,0)));

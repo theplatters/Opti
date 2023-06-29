@@ -10,7 +10,7 @@ alpha = 0.25;
 
 mu0 = 0.5;
 
-[x,l,exitflag,iter] = interiorpoint(x0,mu0,G,d,A,b,alpha);
+[x,l,exitflag,iter] = interiorpoint(x0,,G,d,A,b,mu0,alpha);
 
 disp("Output violations:")
 
@@ -25,7 +25,7 @@ if(exitflag == 0)
     disp(x)
     disp(st);
     disp(st2)
-    disp("With maximum outpuz Violation of")
+    disp("With maximum output violation of")
     disp(outputViolations)
 else
     disp("Not converged")
