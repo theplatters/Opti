@@ -23,12 +23,10 @@ n = 9;
 
     [x,lambda,exitflag, iter] = interiorpoint(x0,mu0,G,d,A,b,alpha);
 
-    st = sprintf("after %d iterations",iter);
-
     if(exitflag == 0)
         disp("Converged to")
         disp(x)
-        disp(st);
+        st = sprintf("after %d iterations");
     else
         disp("Not converged")
         disp(x)
