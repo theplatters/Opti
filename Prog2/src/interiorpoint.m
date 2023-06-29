@@ -23,7 +23,7 @@ lambda = mu ./ (b + beta * mu - A'*x);
 
 
 iter = 1;
-while norm(lambda) <= 10^20 && iter <= 1000
+while norm(lambda) <= 10^20 && iter <= 10000
 
    if all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-8)
        exitflag = 0;
