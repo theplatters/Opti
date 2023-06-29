@@ -7,9 +7,6 @@ end
 
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
 
-m = length(b);
-n = length(x);
-
 if eig(G) < 0
     disp("Matrix G is not positive definite");
     exitflag = 1;
@@ -17,8 +14,7 @@ if eig(G) < 0
 end
 
 
-
-beta = (A' * x - b) / mu + 0.1;
+beta = (A' * x - b) / mu + 1;
 
 c  = (- 0.5 * (G' + G) * x - d  - mu * sum((1 ./ (b + mu * beta - A' * x))' .* A,2)) / mu;
 
