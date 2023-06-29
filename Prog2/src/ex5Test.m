@@ -26,7 +26,7 @@ for n = [9,99,999]
         disp("Converged to f(x) =")
         disp(f(x))
 
-        if(n < = 99)
+        if(n <= 99)
             disp("at x =")
             disp(x)
         end

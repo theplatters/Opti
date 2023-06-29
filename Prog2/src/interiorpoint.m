@@ -1,5 +1,9 @@
-function [x, lambda,exitflag,iter] = interiorpoint(x ,mu, G, d, A, b,alpha)
+function [x, lambda,exitflag,iter] = interiorpoint(x ,mu, G, d, A, b,alpha,maxiter)
 %Constraints are the colums of A
+
+if(nargin < 8)
+    maxiter = 1000;
+end
 
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01];
 
@@ -23,7 +27,7 @@ lambda = mu ./ (b + beta * mu - A'*x);
 
 
 iter = 1;
-while norm(lambda) <= 10^20 && iter <= 10000
+while norm(lambda) <= 10^20 && iter <= maxiter
 
    if all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-8)
        exitflag = 0;
