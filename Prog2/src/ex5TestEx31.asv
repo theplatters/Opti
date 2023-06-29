@@ -1,17 +1,9 @@
 lines = @() disp("-------------------------------------");
 
-alpha = 0.25;    
-
-
-for mu0 = [0.1,1,100]
-    lines()
-    msg = sprintf("mu0 = %d",mu0);
-    disp(msg)
-    lines()
 
 for e = [0.1, 1, 100]
+    msg = sprintf("De parameter = %d",e);
     lines()
-    msg = sprintf("Deviation parameter = %d",e);
     disp(msg)
     lines()
 
@@ -23,14 +15,16 @@ for e = [0.1, 1, 100]
     
     x0 = [0;0;0;1];
     
-
+    alpha = 0.25;
+    
+    mu0 = 0.5;
     
     [x,l,exitflag,iter] = interiorpoint(x0,G,d,A,b,mu0,alpha,100,e);
     
     disp("Output violations:")
     
-    outputViolations = max(abs(min(b - A'*x,0)));
-   
+    outputViolations = max(abs(min(b - A'*x,0)))
+    
     
     st = sprintf("after %d iterations",iter);
     if(exitflag == 0)
@@ -45,5 +39,4 @@ for e = [0.1, 1, 100]
         disp("Not converged")
         disp(x)
     end
-end
 end

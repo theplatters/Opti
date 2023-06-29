@@ -1,0 +1,168 @@
+ex5TestEx31
+-------------------------------------
+mu0 = 1.000000e-01
+-------------------------------------
+-------------------------------------
+Deviation parameter = 1.000000e-01
+-------------------------------------
+Output violations:
+Converged to
+    0.3350
+    0.0874
+    0.1699
+    0.0000
+
+With function value
+   -1.0000
+
+after 40 iterations
+With maximum output violation of
+   4.9516e-14
+
+-------------------------------------
+Deviation parameter = 1
+-------------------------------------
+Output violations:
+Converged to
+    0.3559
+    0.1398
+    0.2118
+    0.0000
+
+With function value
+   -1.0000
+
+after 15 iterations
+With maximum output violation of
+   6.7131e-11
+
+-------------------------------------
+Deviation parameter = 100
+-------------------------------------
+Output violations:
+Converged to
+    4.8313
+   11.3281
+    9.1625
+   -0.0000
+
+With function value
+   -1.0000
+
+after 60 iterations
+With maximum output violation of
+   2.7854e-09
+
+-------------------------------------
+mu0 = 1
+-------------------------------------
+-------------------------------------
+Deviation parameter = 1.000000e-01
+-------------------------------------
+Output violations:
+Converged to
+    0.3559
+    0.1398
+    0.2118
+    0.0000
+
+With function value
+   -1.0000
+
+after 18 iterations
+With maximum output violation of
+   1.0933e-12
+
+-------------------------------------
+Deviation parameter = 1
+-------------------------------------
+Output violations:
+Converged to
+    0.7102
+    1.0254
+    0.9203
+    0.0000
+
+With function value
+   -1.0000
+
+after 13 iterations
+With maximum output violation of
+   9.2914e-10
+
+-------------------------------------
+Deviation parameter = 100
+-------------------------------------
+Output violations:
+Converged to
+   46.3655
+  115.1636
+   92.2309
+   -0.0000
+
+With function value
+   -1.0000
+
+after 60 iterations
+With maximum output violation of
+   2.7854e-08
+
+-------------------------------------
+mu0 = 100
+-------------------------------------
+-------------------------------------
+Deviation parameter = 1.000000e-01
+-------------------------------------
+Output violations:
+Converged to
+    4.8313
+   11.3281
+    9.1625
+    0.0000
+
+With function value
+   -1.0000
+
+after 15 iterations
+With maximum output violation of
+   8.8704e-11
+
+-------------------------------------
+Deviation parameter = 1
+-------------------------------------
+Output violations:
+Converged to
+   46.3654
+  115.1636
+   92.2309
+    0.0000
+
+With function value
+   -1.0000
+
+after 14 iterations
+With maximum output violation of
+   3.7166e-08
+
+-------------------------------------
+Deviation parameter = 100
+-------------------------------------
+[Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  2.070242e-16.] 
+
+Output violations:
+Converged to
+   1.0e+04 *
+
+    0.4616
+    1.1538
+    0.9231
+   -0.0000
+
+With function value
+   -1.0000
+
+after 60 iterations
+With maximum output violation of
+   2.7854e-06
+
+diary off
