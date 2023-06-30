@@ -23,7 +23,7 @@ fprintf('Function value: \n');
 disp(fval);
 
 fprintf('Lagrange multiplicators: \n');
-disp([(-1)*lambda.eqlin;lambda.ineqlin]);
+disp([lambda.eqlin;lambda.ineqlin]);
 
 %INTERIOR-POINT
 fprintf('===========================\n');
@@ -41,4 +41,4 @@ fprintf('Function value: \n');
 disp(fval);
 
 fprintf('Lagrange multiplicators: \n');
-disp([(-1)*lambda.eqlin;lambda.ineqlin]);
+disp([lambda.eqlin;lambda.ineqlin]);
