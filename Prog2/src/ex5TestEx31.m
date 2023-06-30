@@ -29,7 +29,7 @@ for e = [0.1, 1, 100]
     
     disp("Output violations:")
     
-    outputViolations = max(abs(min(b - A'*x,0)));
+    constraint = max(abs(min(b - A'*x,0)));
    
     
     st = sprintf("after %d iterations",iter);
@@ -39,8 +39,8 @@ for e = [0.1, 1, 100]
         disp("With function value")
         disp(d'*x)
         disp(st);
-        disp("With maximum output violation of")
-        disp(outputViolations)
+        disp("With maximum constraint violation of")
+        disp(constraint)
     else
         disp("Not converged")
         disp(x)
