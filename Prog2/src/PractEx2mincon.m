@@ -20,10 +20,10 @@ for i=1:3
     ub(2) = 3;
     
     x0 = zeros(N(i),1); %column vector
-    %x0 = [0,1,1,1,1]'; %alterntative starting point for n=5
     
     nonlcon = @con;
-    
+
+    options=optimoptions('fmincon');
     if i == 3
         options=optimoptions('fmincon','MaxFunctionEvaluations',30000);
     end

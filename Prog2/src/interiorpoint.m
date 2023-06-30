@@ -26,9 +26,9 @@ end
 %sequence for choice of theta values
 sequence = [0.99 0.9 0.8 0.6 0.4 0.15 0.05, 0.01]; %afterwards division by 10
 
-%checking if matrix G is positive definite
+%checking if matrix G is positive semi-definite
 if eig(G) < 0
-    exitflag = 1; %Matrix G is not positive definite
+    exitflag = 1; %Matrix G is not positive semi-definite
     return;
 end
 

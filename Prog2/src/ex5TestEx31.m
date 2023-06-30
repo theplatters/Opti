@@ -2,16 +2,16 @@ lines = @() disp("-------------------------------------");
 
 alpha = 0.25;    
 
-
-for mu0 = [0.1,1,100]
-    lines()
-    msg = sprintf("mu0 = %d",mu0);
-    disp(msg)
-    lines()
+tic
 
 for e = [0.1, 1, 100]
     lines()
     msg = sprintf("Deviation parameter = %d",e);
+    disp(msg)
+    lines()
+    for mu0 = [100,1,0.5,0.1]
+    lines()
+    msg = sprintf("mu0 = %d",mu0);
     disp(msg)
     lines()
 
@@ -45,5 +45,6 @@ for e = [0.1, 1, 100]
         disp("Not converged")
         disp(x)
     end
+    end
 end
-end
+toc
