@@ -129,9 +129,19 @@ Below, the script \texttt{testFunction.m} creates the local objects for the func
 \lstinputlisting{src/testFunction.m}
 Below, find the output of \texttt{ex5Test.m}. 
 \lstinputlisting{src/ex5Test.txt}
-
-n=9 converges to same minimizer xbar
-for n=9
-
-constraint violation negligible
+For $n=9$ the calculated minimizers coincide (up to small error)
+\par
+Concerning the number of iterations we can notice the following:  The number of iterations needed for the function (same dimension) is highest when the value of $\mu_0$ that is passed to \texttt{interiorpoint} is the largest ($\mu_0=100$)
+\begin{center}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        $n$/$\mu_0$&0.1&1&100\\
+        9&16&21&22\\
+        99&35&35&40\\
+        999&not converged&81&94\\
+        \hline
+        \end{tabular}
+        \end{center}
+This seems to be plausible since for larger $\mu_0$ more iterations are needed for $\mu_k$ (i.e. $\mu$ in the $k$th iteration) to be close to zero. However, for high dimension (i.e.$n=999$) and small $\mu_0$ (i.e. $\mu_0=0.1$) the algorithm does not terminate and exits with exitflag=3, thus exceeding the number of maximal iterations, since the Lagrange multipliers are reasonably big ($\sim10^3$). Furthermore, calling \texttt{max(abs(gradLagrangian(x,G,d,A,b,lambda)))} yields $2.6425e-07$ , therefore also the entries of the gradient of the Lagrangian are reasonably small after \texttt{maxiter=1000} iterations. However not documented, if you change \texttt{maxiter} to $2500$, the entries do not get smaller (of the same order of magnitude to beforehand).\par
+Overall, the constraint violations (i.e. the quantity max(abs(min(b - A’*x,0)))) are very small, meaning the calculated minimizers lie close to the boundaries given by $Ax=b$.
 \end{document}
