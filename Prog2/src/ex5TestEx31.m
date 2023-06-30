@@ -27,11 +27,9 @@ for e = [0.1, 1, 100]
     
     [x,l,exitflag,iter] = interiorpoint(x0,G,d,A,b,mu0,alpha,100,e);
     
-    disp("Output violations:")
     
     constraint = max(abs(min(b - A'*x,0)));
-   
-    
+  
     st = sprintf("after %d iterations",iter);
     if(exitflag == 0)
         disp("Converged to")
