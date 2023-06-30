@@ -6,10 +6,10 @@ alpha = 0.5;
 
 
 for mu0 = [0.1,1,100]
-    lines()
+    lines();
     msg = sprintf("mu0 = %d",mu0);
     disp(msg);
-    lines()
+    lines();
 for n = [9,99,999]
     lines();
     msg = sprintf("n = %d",n);
@@ -24,7 +24,7 @@ for n = [9,99,999]
     
     [x,lambda,exitflag, iter] = interiorpoint(x0,G,d,A,b,mu0,alpha,1000,devi);
     
-    outputViolations = max(abs(min(b - A'*x,0)));
+    constraintViolation = max(abs(min(b - A'*x,0)));
 
 
     st = sprintf("after %d iterations",iter);
@@ -37,8 +37,8 @@ for n = [9,99,999]
             disp(x)
         end
         disp(st);
-        disp("With output violations: ")
-        disp(outputViolations)
+        disp("With constraint violations: ")
+        disp(constraintViolation)
     else
         disp("Not converged. f(x) = ")
         disp(f(x))

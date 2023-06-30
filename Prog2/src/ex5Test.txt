@@ -20,7 +20,7 @@ at x =
     0.0050
 
 after 16 iterations
-With output violations: 
+With constraint violations: 
      0
 
 -------------------------------------
@@ -30,13 +30,12 @@ Converged to f(x) =
    48.4195
 
 after 35 iterations
-With output violations: 
+With constraint violations: 
      0
 
 -------------------------------------
 n = 999
 -------------------------------------
-Maximum iterations reached, or lambda too big
 Not converged. f(x) = 
   491.4160
 
@@ -61,7 +60,7 @@ at x =
     0.0050
 
 after 21 iterations
-With output violations: 
+With constraint violations: 
    1.1527e-11
 
 -------------------------------------
@@ -71,7 +70,7 @@ Converged to f(x) =
    48.4195
 
 after 35 iterations
-With output violations: 
+With constraint violations: 
    7.3691e-14
 
 -------------------------------------
@@ -81,7 +80,7 @@ Converged to f(x) =
   491.4160
 
 after 81 iterations
-With output violations: 
+With constraint violations: 
    4.6074e-15
 
 -------------------------------------
@@ -105,7 +104,7 @@ at x =
     0.0050
 
 after 22 iterations
-With output violations: 
+With constraint violations: 
    5.8202e-09
 
 -------------------------------------
@@ -115,7 +114,7 @@ Converged to f(x) =
    48.4195
 
 after 40 iterations
-With output violations: 
+With constraint violations: 
    3.9455e-11
 
 -------------------------------------
@@ -125,6 +124,7 @@ Converged to f(x) =
   491.4160
 
 after 94 iterations
-With output violations: 
+With constraint violations: 
    2.3066e-12
 
+diary off
