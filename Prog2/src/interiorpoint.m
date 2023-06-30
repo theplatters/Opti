@@ -47,7 +47,7 @@ iter = 1;
 while norm(lambda) <= 10^20 && iter <= maxiter   %QP is infeasible or max iterations are reached 
    %further stopping criteria: we are close to a solution
    %                           Gradient of Lagrangian is small 
-   if all(abs(gradLagrangian(x,G,d,A,b,lambda)) <= 10e-8) && (all(lambda >= 0))
+   if all(abs(gradLagrangian(x,G,d,A,lambda)) <= 10e-8) && (all(lambda >= 0))
        %a solution is found
        exitflag = 0;
         return
